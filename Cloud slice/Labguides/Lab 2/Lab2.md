@@ -1,3 +1,5 @@
+## **Lab 2: Migrate Azure Synapse Analytics SQL objects to Fabric Data Warehouse**
+
 **Introduction**
 
 This lab focuses on migrating SQL objects and data from **Azure Synapse
@@ -154,7 +156,7 @@ By the end of this lab, you will be able to:
 15. Paste the code as shown in the image below, then click the **Play**
     icon to run it and observe the counts in the output.
 
-**SELECT COUNT(\*) FROM dbo.employee;**
++++SELECT COUNT(*) FROM dbo.employee;+++
 
 ![](./media/image27.png)
 
@@ -180,7 +182,7 @@ SELECT TOP 10 \* FROM dbo.employee;
 
 SQL
 
-> SELECT COUNT(\*) FROM dbo.Customer;
++++SELECT TOP 10 * FROM dbo.employee;+++
 
 ![](./media/image32.png)
 
