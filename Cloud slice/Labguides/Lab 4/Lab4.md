@@ -1,3 +1,5 @@
+## **Lab 4- Migrate Azure Data Factory Pipelines to Fabric Data Factory**
+
 **Introduction**
 
 In modern data engineering solutions, organizations are increasingly
@@ -48,8 +50,8 @@ generated](./media/image1.png)
 generated](./media/image2.png)
 
 2.  Open a browser go to
-    +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.datafactory%2Fdata-factory-get-started%2Fazuredeploy.json
-    +++
+    +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.datafactory%2Fdata-factory-get-started%2Fazuredeploy.json+++
+    
 
 3.  Select the appropriate **subscription** and **resource group**,
     choose the region as *(US) **Central US***, and then click
@@ -205,7 +207,13 @@ incorrect.](./media/image32.png)
 6.  In the **Create a workspace** tab, enter the following details and
     click on the **Apply** button.
 
-[TABLE]
+## Workspace Configuration
+
+| Field                   | Value                                                                 |
+|------------------------|-----------------------------------------------------------------------|
+| Name                   | Azure Data Factory-FabricXXXX (XXXX can be a unique number)           |
+| Advanced               | Under License mode, select Fabric                                     |
+| Default storage format | Small semantic model storage format                                   |
 
 > ![](./media/image35.png)
 >
