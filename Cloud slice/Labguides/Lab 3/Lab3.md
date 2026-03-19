@@ -1,3 +1,5 @@
+## **Lab 3- Migrating Azure Synapse Spark and Lake Database to Microsoft Fabric**
+
 **Introduction**
 
 In this lab, you will learn how to migrate data and workloads from Azure
@@ -222,9 +224,10 @@ Open Synapse Studio
 ![](./media/image26.png)
 
 4.  Enter the folder name as **FabricMigration** and click the
-    **Create** button.![](./media/image27.png)
+    **Create** button.
+    ![](./media/image27.png)
 
-5.  Select **FabricMigration** folder
+6.  Select **FabricMigration** folder
 
 ![](./media/image28.png)
 
@@ -287,7 +290,11 @@ assets.
 > ![A screenshot of a computer AI-generated content may be
 > incorrect.](./media/image38.png)
 
-[TABLE]
+| Field                     | Value                                      |
+|--------------------------|--------------------------------------------|
+| Name                     | +++ FabricMigrationLab@lab.LabInstance.Id+++ |
+| Advanced                 | Select Fabric                              |
+| Default storage format   | Small dataset storage format               |
 
 3.  On the **Create a workspace** pane that appears to the right, enter
     the following details, and then click **Apply**.
