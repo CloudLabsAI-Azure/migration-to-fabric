@@ -1,18 +1,12 @@
-## **Lab 3- Migrating Azure Synapse Spark and Lake Database to Microsoft Fabric**
+## Lab 3: Migrate Azure Synapse Spark and Lake Database to Microsoft Fabric
 
-**Introduction**
+### Estimated Duration: 120 Minutes
 
-In this lab, you will learn how to migrate data and workloads from Azure
-Synapse Analytics to Microsoft Fabric. The lab covers creating and
-configuring a Synapse workspace, uploading and accessing data from Azure
-Data Lake Storage Gen2, and setting up a Microsoft Fabric workspace with
-a Lakehouse.
+## Overview
 
-You will also explore how to use shortcuts to connect external storage,
-transform data using notebooks, and rebuild data pipelines in Microsoft
-Fabric. This hands-on exercise provides practical experience in
-modernizing data platforms and implementing a unified analytics
-solution.
+In this lab, you will learn how to migrate data and workloads from Azure Synapse Analytics to Microsoft Fabric. The lab covers creating and configuring a Synapse workspace, uploading and accessing data from Azure Data Lake Storage Gen2, and setting up a Microsoft Fabric workspace with a Lakehouse.
+
+You will also explore how to use shortcuts to connect external storage, transform data using notebooks, and rebuild data pipelines in Microsoft Fabric. This hands-on exercise provides practical experience in modernizing data platforms and implementing a unified analytics solution.
 
 **Objective**
 
@@ -32,247 +26,162 @@ By the end of this lab, you will be able to:
 
 - Validate migrated data and resources
 
-## Task 0: Understand the VM and the credentials
-
-In this task, we will identify and understand the credentials that we
-will be using throughout the lab.
-
-1.  **Instructions** tab hold the lab guide with the instructions to be
-    followed throughout the lab.
-
-2.  **Resources** tab has got the credentials that will be needed for
-    executing the lab.
-
-    - **URL** – URL to the Azure portal
-
-    - **Subscription** – This is the ID of the subscription assigned to
-      you
-
-    - **Username** – The user id with which you need to login to the
-      Azure services.
-
-    - **Password** – Password to the Azure login. Let us call this
-      Username and password as Azure login credentials. We will use
-      these creds wherever we mention Azure login credentials.
-
-    - **Resource Group** – The **Resource group** assigned to you.
-
-\[!Alert\] **Important:** Make sure you create all your resources under
-this Resource group
-
-> ![](./media/image1.png)
-
-3.  **Help** tab holds the Support information. The **ID** value here is
-    the **Lab instance ID** which will be used during the lab execution.
-
-> ![](./media/image2.png)
-
 ## Task 1: Create a Synapse workspace in the Azure portal
 
-1.  Open a browser go to +++https://portal.azure.com+++ and sign in with
-    your cloud slice account below.
+1. In the search bar, enter **Synapse** and select **Azure Synapse Analytics**.
 
-> Username: <+++@lab.CloudPortalCredential>(User1).Username+++
->
-> Password: <+++@lab.CloudPortalCredential(User1).Password>+++
->
-> ![A screenshot of a computer Description automatically
-> generated](./media/image3.png)
->
-> ![A screenshot of a login box Description automatically
-> generated](./media/image4.png)
+    ![](../Lab1/media/image5.png)   
 
-2.  In the search bar enter **Synapse** and select **Azure Synapse
-    Analytics.** Search for **Synapse Analytics**.
+1. Click **Create**.
 
-> ![](./media/image5.png)
+    ![](../Lab1/media/image6.png)
 
-3.  Click **Create**.
+1. Enter the following details to create the resource group, then click **OK**.
 
-> ![](./media/image6.png)
+    - **Subscription**: Select the default subscription
+    - **Resource Group**: Select the assigned Resource group
+    - **Managed Resource group:**  Leave this blank.
+    - **Workspace name**: fabric-synapse<inject key="DeploymentID" enableCopy="false"/>
+    - **Region**: Select the region of your resource group
 
-4.  Enter below details to create resource group and then click
-    on **OK**.
+        ![](../Lab1/media/image7.png)
 
-    1.  **Subscription**: Select the assigned subscription
+    - **Select Data Lake Storage Gen2 account:** From subscription
+    - **Account name:** Create
+    New: **fabricsynapsegen2<inject key="DeploymentID" enableCopy="false"/>**
+    - Click **OK**
 
-    2.  **Resource Group**: Select the assigned Resource group
+        ![](../Lab1/media/image8.png)
 
-    3.  **Managed Resource group:**  Leave this blank.
+    - **File System Name**: Create
+    New: **synapsefile<inject key="DeploymentID" enableCopy="false"/>**
+1. Enter the following details, then click **Next: Security >**.
 
-    4.  **Workspace name**: fabric-synapseXXXX (XXXXX can be unique
-        number)
+        ![](../Lab1/media/image9.png)
 
-    5.  **Region**: Select the assigned **region**
+1. Configure the **Security** settings by selecting **both Microsoft
+    
+    - **SQL Server admin login:** sqladmin
+    - **SQL Password**: password321!
+    - Click **Review + create**
 
-- **Select Data Lake Storage Gen2 account:** Create new
+    ![](../Lab1/media/image11.png)
 
-  1.  **Account name**fabricsynapsegen2XXXX (XXXX can be unique number)
+1.  In the **Review + submit** tab, once the validation is passed, click on the **Create** button.
 
-  2.  Click **OK**
+    ![](../Lab1/media/image12.png)
 
-![](./media/image7.png)
+1. This deployment may take a few minutes.
 
-![](./media/image8.png)
+    ![](../Lab1/media/image13.png)
 
-5.  Enter below details and then click on **Next:Security**.
+1. Click on **Go to resource group** button.
 
-**File System Name**: Create
-New: [**synapsefileXX**](urn:gd:lg:a:send-vm-keys)(XX can be unique
-number) and click **OK**.
+    ![](../Lab1/media/image14.png)
 
-![](./media/image9.png)
+1. Click on your **Synapse workspace**.
 
-![](./media/image10.png)
-
-6.  Configure the **Security** settings by selecting **both Microsoft
-    Entra ID and SQL authentication**, then provide a valid **SQL admin
-    username: sqladmin** and **password: password321!** to enable secure
-    access to the Azure Synapse workspace.
-
-7.  Click **Review + create**
-
-> ![](./media/image11.png)
-
-8.  In the **Review + submit** tab, once the Validation is Passed, click
-    on the **Create** button.
-
-> ![](./media/image12.png)
-
-9.  This deployment may take a few minutes.
-
-![](./media/image13.png)
-
-10. Click on **Go to resource group** button.
-
-> ![](./media/image14.png)
-
-11. Click on your **Synapse workspace**.
-
-![](./media/image15.png)
+    ![](../Lab1/media/image15.png)
 
 ## Task 2: Create a dedicated SQL pool
 
-1.  In Open Synapse Studio box, click on **Open** to launch your Azure
-    Synapse studio.
+1. In the **Open Synapse Studio** dialog, click **Open** to launch Azure Synapse Studio.
 
-> ![](./media/image16.png)
+    ![](../Lab1/media/image16.png)
 
-This launches the Synapse Studio interface.
+1. In Synapse Studio, select **Manage** (left pane).
 
-2.  In Synapse Studio, select **Manage** (left pane).
+    ![](../Lab1/media/image17.png)
 
-> ![](./media/image17.png)
+1. In Synapse Studio, on the left-side pane, select **Manage** \> **SQL pools** under **Analytics pools** and then click on **New**
 
-3.  In Synapse Studio, on the left-side pane, select **Manage** \> **SQL
-    pools** under **Analytics pools** and then click on **New.**
+    ![](../Lab1/media/image18.png)
 
-![](./media/image18.png)
+1. **Configure SQL Pool**
 
-4.  **Configure SQL Pool**
+    - **SQL pool name:** **sql dedicated pool**
+    - **Performance level:** Choose **DW100c**
+    - Click **Review + Create → Create**.
 
-- **SQL pool name:** +++sql dedicated pool+++
+        ![](../Lab1/media/image19.png)
 
-- **Performance level:** Choose DW100c (or any required level for
-  training)
+1. In the **Review + submit** tab, once the Validation is Passed, click on the **Create** button.
 
-- Click **Review + Create → Create**.
+    ![](../Lab1/media/image20.png)
 
-![](./media/image19.png)
+    ![](../Lab1/media/image21.png)
 
-5.  In the **Review + submit** tab, once the Validation is Passed, click
-    on the **Create** button.
+1. Go to **Manage → SQL pools** and confirm the Dedicated SQL Pool shows **Online**
 
-![](./media/image20.png)
+    ![](../Lab1/media/image22.png)
 
-![](./media/image21.png)
+1. Return to the **Azure portal**. In the **Overview** section of the Synapse workspace, copy the **Dedicated SQL endpoint** and **Dedicated SQL pool** details, and save them in a Notepad for later use.
 
-6.  Go to **Manage → SQL pools** and confirm the Dedicated SQL Pool
-    shows **Online**
+    ![](../Lab1/media/image23.png)
 
-![](./media/image22.png)
-
-**Important**: A dedicated SQL pool consumes billable resources as long
-as it's active. You can pause the pool later to reduce costs. Please
-Pause it if you not performing labs for the day or even for 30 minutes
-to save your credits.
-
-Make sure to resume your SQLPool before you start your labs.
-
-7.  In the Overview section of the Synapse workspace home page, copy the
-    **Dedicated SQL endpoint and Dedicated SQL pool**, and save them in
-    a notepad.
-
-![](./media/image23.png)
-
-Task 3: Upload Sample Data into the Primary Storage Account
+## Task 3: Upload Sample Data into the Primary Storage Account
 
 Open Synapse Studio
 
-1.  In Synapse Studio, navigate to the **Data Hub**. Select **Linked**.
+1. In Synapse Studio, navigate to the **Data Hub** and select **Linked**.
 
-> ![](./media/image24.png)
+    ![](./media/image24.png)
 
-2.  Under the category **Azure Data Lake Storage Gen2** you'll see an
-    item with your workspace name like **fabric-synapseXXXXX ( Primary
-    -- asastorageaccount01(your storageaccount)**
+1. Under **Azure Data Lake Storage Gen2**, locate the item with your workspace name, such as **fabric-synapse<inject key="DeploymentID" enableCopy="false"/> (Primary — asastorageaccount01 (your storage account))**.
 
-> ![](./media/image25.png)
+    ![](./media/image25.png)
 
-3.  Select **+ New folder**
+1. Click **+ New folder**.
 
 ![](./media/image26.png)
 
-4.  Enter the folder name as **FabricMigration** and click the
+1.  Enter the folder name as **FabricMigration** and click the
     **Create** button.
     ![](./media/image27.png)
 
-6.  Select **FabricMigration** folder
+1.  Select **FabricMigration** folder
 
 ![](./media/image28.png)
 
-4.  Click **Upload**.
+1.  Click **Upload**.
 
 ![](./media/image29.png)
 
-5.  Click on **Folder**.
+1.  Click on **Folder**.
 
 ![](./media/image30.png)
 
-12. Browse to **C:\LabFiles\LabFiles\Lab1** on your VM, then
+1. Browse to **C:\LabFiles\LabFiles\Lab1** on your VM, then
     select **all** file except DACPAC file and click on **Open** button.
 
 ![](./media/image31.png)
 
-6.  After selecting all the required files, click the **Upload** button
+1.  After selecting all the required files, click the **Upload** button
     to add them to the destination folder.
 
 ![](./media/image32.png)
 
 ![](./media/image33.png)
 
-7.  Right‑click on the folder and select **Properties.**
+1.  Right-click on the folder and select **Properties.**
 
-> ![](./media/image34.png)
+    ![](./media/image34.png)
 
-8.  In Properties page, copy **URL** path and save it in notepad to use
-    them in further tasks
+1.  Copy the **URL** path and save it in notepad to use
+    it for later use
 
-> ![](./media/image35.png)
+    ![](./media/image35.png)
 
-9.  Right‑click on the **Dimension_Customer.csv** and select
+1.  Right-click on the **DimCustomer.csv** and select
     **Properties.**
 
-> ![](./media/image36.png)
+    ![](./media/image36.png)
 
-10. In Properties page, copy **ABFSS** path and save it in notepad to
-    use them in further tasks
+1. Copy the **ABFSS** path and save it in notepad to use it for later use
 
-> ![](./media/image37.png)
+    ![](./media/image37.png)
 
-**Note**: URL and AFSS path might be different for your account.
-
-## Task 3: Create a Fabric workspace
+## Task 4: Create a Fabric workspace
 
 In this task, you set up a new Microsoft Fabric workspace to serve as
 the central hub for the Medallion Architecture implementation. This
@@ -284,11 +193,11 @@ assets.
     the following URL: +++https://app.fabric.microsoft.com/+++ then
     press the **Enter** button.
 
-2.  On the **Fabric Home** page click on **+ New Workspaces** as shown
+1.  On the **Fabric Home** page click on **+ New Workspaces** as shown
     in the image below.
 
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image38.png)
+    ![A screenshot of a computer AI-generated content may be
+    incorrect.](./media/image38.png)
 
 | Field                     | Value                                      |
 |--------------------------|--------------------------------------------|
@@ -296,33 +205,29 @@ assets.
 | Advanced                 | Select Fabric                              |
 | Default storage format   | Small dataset storage format               |
 
-3.  On the **Create a workspace** pane that appears to the right, enter
-    the following details, and then click **Apply**.
+1. Enter the following details in the **Create a workspace** pane, then click **Apply**.
 
-> ![](./media/image39.png)
->
-> ![](./media/image40.png)
+    ![](./media/image39.png)
 
-![](./media/image41.png)
+    ![](./media/image40.png)
 
-## Task 4: Create Lakehouse
+    ![](./media/image41.png)
 
-1.  In the **FabricMigrationLabXXX** workspace page, navigate and click
-    on **+New item**  button
+## Task 5: Create a Lakehouse
 
-> ![](./media/image42.png)
+1. Click the **+New item** button.
 
-2.  Click on the "**Lakehouse**" tile.
+    ![](./media/image42.png)
 
-> ![](./media/image43.png)
+1. Click the **Lakehouse** tile.
 
-3.  In the **New lakehouse** dialog box, enter
-    +++**SynapseMigrationLakehouse+++** in the **Name** field, click on
-    the **Create** button and open the new lakehous
+    ![](./media/image43.png)
 
-> ![](./media/image44.png)
+1. Enter +++**SynapseMigrationLakehouse+++** in the **Name** field, then click **Create** and open the new lakehouse.
 
-![](./media/image45.png)
+    ![](./media/image44.png)
+
+    ![](./media/image45.png)
 
 ## Task 5: Create Shortcut in the Files Section
 
@@ -330,206 +235,191 @@ assets.
 
 ![](./media/image46.png)
 
-2.  From the list of external sources, select **Azure Data Lake Storage
+1.  From the list of external sources, select **Azure Data Lake Storage
     Gen2** to create a new shortcut.
 
 ![](./media/image47.png)
 
-3.  Select **New connection**, enter the **ADLS Gen2 URI**, and then
+1.  Select **New connection**, enter the **ADLS Gen2 URI**, and then
     click **Next** to proceed with creating the shortcut.
 
-> ![](./media/image48.png)
+    ![](./media/image48.png)
 
-4.  Select **synapsefile** and click **Next**
+1.  Select **synapsefile** and click **Next**
 
-> ![](./media/image49.png)
+    ![](./media/image49.png)
 
-5.  Click **Create**
+1.  Click **Create**
 
-> ![](./media/image50.png)
+    ![](./media/image50.png)
 
-6.  Select the **synapsefile** folder to review the files.
+1.  Select the **synapsefile** folder to review the files.
 
-> ![](./media/image51.png)
+    ![](./media/image51.png)
 
 ![](./media/image52.png)
 
-7.  In the **Lakehouse** page, navigate and click on **Open
-    notebook** drop in the command bar, then select **New notebook**.
+1. In the **Lakehouse** page, click **Open notebook** in the command bar and select **New notebook**.
 
 ![](./media/image53.png)
 
-8.  Replace all the code in the **cell** with the following code and
-    click on **▷ Run cell** button and review the output.
+1. Replace the code in the cell with the following code, then click **▷ Run cell** to review the output.
 
-df = spark.read.format("csv").load("Dimension_Customer File ABFSS URI ")
+    ```python
+    df = spark.read.format("csv").load("Dimension_Customer File ABFSS URI ")
+    ```
 
-> Update the **Dimension_Customer** file with the **ABFSS URI** saved in
-> **Task 2, Step 10**.
->
-> **Example:**
->
-> df =
-> spark.read.format("csv").load("abfss://synapsefile@fabricsynapsegen21.dfs.core.windows.net/FabricMigration/Dimension_Customer.csv")
->
-> ![](./media/image54.png)
+    Replace **Dimension_Customer** with the **ABFSS URI** from Task 3, Step 12.
 
-9.  Use the **+ Code** icon below the cell output to add a new code cell
-    to the notebook, and enter the following code in it. Click on **▷
-    Run cell** button and review the output
+    **Example:**
 
-> df.write.format("delta").mode("overwrite").save("Tables/Customer")
->
-> ![](./media/image55.png)
+    ```python
+    df = spark.read.format("csv").load("abfss://synapsefile@fabricsynapsegen21.dfs.core.windows.net/FabricMigration/Dimension_Customer.csv")
+    ```
 
-10. To validate the created tables, click and select refresh on
-    the **Tables** in the **Explorer** panel until all the tables appear
-    in the list.
+    ![](./media/image54.png)
 
-> ![](./media/image56.png)
->
-> ![](./media/image57.png)
+1. Click the **+ Code** icon below the cell output to add a new code cell, enter the following code, and click **▷ Run cell**.
 
-## Task 6: Rebuild Synapse Pipelines in Microsoft Fabric
+    ```python
+    df.write.format("delta").mode("overwrite").save("Tables/Customer")
+    ```
 
-1.  From the left menu, select workspace icon and then select workspace
-    name.
+    ![](./media/image55.png)
 
-> ![](./media/image58.png)
+1. To validate the created tables, refresh the **Tables** section in the **Explorer** panel until all tables appear.
 
-2.  Select the **+ New item** option on the workspace page and
-    select **Pipeline**
+    ![](./media/image56.png)
 
-> ![](./media/image59.png)
+    ![](./media/image57.png)
 
-3.  Provide a Pipeline Name as +++**Migrate_Pipeline+++** and then
-    select **Create**.
+## Task 7: Rebuild Synapse Pipelines in Microsoft Fabric
 
-> ![](./media/image60.png)
->
-> ![](./media/image61.png)
+1. From the left menu, click the workspace icon and select your workspace name.
 
-4.  On newly created pipeline, select **Copy data** dropdown and
+    ![](./media/image58.png)
+
+1. Click **+ New item** and select **Pipeline**.
+
+    ![](./media/image59.png)
+
+1. Enter +++**Migrate_Pipeline+++** as the pipeline name and click **Create**.
+
+    ![](./media/image60.png)
+
+    ![](./media/image61.png)
+
+1.  On newly created pipeline, select **Copy data** dropdown and
     choose **Add copy data activity** option.
 
-> ![](./media/image62.png)
+    ![](./media/image62.png)
 
-5.  With the **copy data** being selected, navigate to **Source** tab.
+1.  With the **copy data** being selected, navigate to **Source** tab.
 
-> ![](./media/image63.png)
+    ![](./media/image63.png)
 
-6.  Select the **Connection** dropdown and select **Browse all** option.
+1.  Select the **Connection** dropdown and select **Browse all** option.
 
-> ![](./media/image64.png)
+    ![](./media/image64.png)
 
-7.  Select **+ New** from the left pane
+1.  Select **+ New** from the left pane
 
-> ![](./media/image65.png)
+    ![](./media/image65.png)
 
-8.  From the data source options, select **Azure Data Lake Storage
+1.  From the data source options, select **Azure Data Lake Storage
     Gen2** to begin the connection setup.
 
-> ![](./media/image66.png)
+    ![](./media/image66.png)
 
-9.  Select **New connection**, enter the **ADLS Gen2 URI**, and then
+1.  Select **New connection**, enter the **ADLS Gen2 URI**, and then
     click **Connect** to proceed with creating the shortcut.
 
-> ![](./media/image67.png)
+    ![](./media/image67.png)
 
-10. In the **Source** tab of the Copy Data activity, click the
+1. In the **Source** tab of the Copy Data activity, click the
     **Browse** button to select the folder containing the source files.
 
-> ![](./media/image68.png)
+    ![](./media/image68.png)
 
-11. Select the **Fact_Order.csv** file and click **OK**.
+1. Select the **Fact_Order.csv** file and click **OK**.
 
-> ![](./media/image69.png)
+    ![](./media/image69.png)
 
-11. Now, navigate to **destination** tab and click **Browse all** tab
+1. Navigate to the **Destination** tab and click **Browse all**.
 
-> ![](./media/image70.png)
+    ![](./media/image70.png)
 
-12. On choose a destination window, select **OneLake catalog** from the
-    left pane and select the **synapseMigrationLakehouse**
+1. In the destination selection window, select **OneLake catalog** from the left pane and then select **synapseMigrationLakehouse**.
 
 ![](./media/image71.png)
 
-13. In the **Source** tab, select **DelimitedText** as the file format.
+1. In the **Source** tab, select **DelimitedText** as the file format.
 
-> ![](./media/image72.png)
+    ![](./media/image72.png)
 
-14. Under the **Destination** tab, click **+ New**.
+1. Under the **Destination** tab, click **+ New**.
 
 ![](./media/image73.png)
 
-15. Enter the table name as +++**dim_Date+++** and click **Create**.
+1. Enter the table name as +++**dim_Date+++** and click **Create**.
 
-> ![](./media/image74.png)
+    ![](./media/image74.png)
 
-8.  Click on **Run** to run the copy data.
+1. Click **Run** to execute the copy activity.
 
-> ![](./media/image75.png)
+    ![](./media/image75.png)
 
-16. Click on **Save and run** button so that pipeline will be save and
-    run.
+1. Click **Save and run** to save and execute the pipeline.
 
-> ![](./media/image76.png)
->
-> ![](./media/image77.png)
+    ![](./media/image76.png)
 
-17. After the pipeline executes successfully, go to the left‑hand
-    navigation menu, select your workspace named
-    **FabricMigrationLabXXX,** and then click on **Lakehouse**.
+    ![](./media/image77.png)
 
-![](./media/image78.png)
+1. After the pipeline completes successfully, navigate to your workspace and click **Lakehouse**.
 
-> ![](./media/image79.png)
+    ![](./media/image78.png)
 
-## Task 7: Delete the Resources
+    ![](./media/image79.png)
 
-1.  To delete resources , type **Resource groups** in the Azure portal
-    search bar, navigate and click on **Resource
-    groups** under **Services**.
+## Task 8: Delete the Resources
+
+1. Search for **Resource groups** in the Azure portal and select it under **Services**.
 
 ![A screenshot of a computer Description automatically
 generated](./media/image80.png)
 
-2.  In the Resource groups page, select your resource group.
+1.  In the Resource groups page, select your resource group.
 
-3.  On the **Resource Group** home page, select all resources and then
+1.  On the **Resource Group** home page, select all resources and then
     click **Delete**.
 
 ![](./media/image81.png)
 
-4.  In the **Delete Resources** pane that appears on the right side,
-    navigate to **Enter “delete” to confirm deletion** field, then click
-    on the **Delete** button
+1. In the **Delete Resources** pane, type "delete" in the confirmation field and click **Delete**.
 
-![](./media/image82.png)
+    ![](./media/image82.png)
 
 ![](./media/image83.png)
 
-5.  Go to your +++ https://app.fabric.microsoft.com/+++ Microsoft Fabric
-    workspace
+1. Go to the Microsoft Fabric workspace at +++https://app.fabric.microsoft.com/+++.
 
-6.  Select the **...** option under the workspace name and
-    select **Workspace settings**.
+1. Select the **...** option under the workspace name and choose **Workspace settings**.
 
-> ![](./media/image84.png)
+    ![](./media/image84.png)
 
-7.  Select **General** and **Remove this workspace.**
+1. Select **General** and choose **Remove this workspace**.
 
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image85.png)
+    ![A screenshot of a computer AI-generated content may be
+    incorrect.](./media/image85.png)
 
-1.  Click on **Delete** in the warning that pops up.
+1. Click **Delete** in the confirmation dialog.
 
-> ![](./media/image86.png)
+    ![](./media/image86.png)
 
-2.  Wait for a notification that the Workspace has been deleted, before
+1.  Wait for a notification that the Workspace has been deleted, before
     proceeding to the next lab.
 
-> ![](./media/image87.png)
+    ![](./media/image87.png)
 
 **Summary**
 
