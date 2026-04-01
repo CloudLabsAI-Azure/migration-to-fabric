@@ -8,23 +8,17 @@ In this lab, you will learn how to migrate data and workloads from Azure Synapse
 
 You will also explore how to use shortcuts to connect external storage, transform data using notebooks, and rebuild data pipelines in Microsoft Fabric. This hands-on exercise provides practical experience in modernizing data platforms and implementing a unified analytics solution.
 
-**Objective**
+## Objectives
 
 By the end of this lab, you will be able to:
 
-- Create and configure an Azure Synapse workspace and dedicated SQL pool
-
-- Upload and manage data in Azure Data Lake Storage Gen2
-
-- Set up a Microsoft Fabric workspace and Lakehouse
-
-- Create shortcuts to access external data in OneLake
-
-- Transform and load data using notebooks
-
-- Rebuild and execute data pipelines in Microsoft Fabric
-
-- Validate migrated data and resources
+- Task 1: Create a Synapse workspace in the Azure portal
+- Task 2: Create a dedicated SQL pool
+- Task 3: Upload Sample Data into the Primary Storage Account
+- Task 4: Create a Fabric workspace
+- Task 5: Create a Lakehouse
+- Task 6: Create Shortcut in the Files Section
+- Task 7: Rebuild Synapse Pipelines in Microsoft Fabric
 
 ## Task 1: Create a Synapse workspace in the Azure portal
 
@@ -67,7 +61,7 @@ By the end of this lab, you will be able to:
 
     ![](../Lab1/media/image11.png)
 
-1.  In the **Review + submit** tab, once the validation is passed, click on the **Create** button.
+1. In the **Review + submit** tab, once the validation is passed, click on the **Create** button.
 
     ![](../Lab1/media/image12.png)
 
@@ -135,19 +129,19 @@ Open Synapse Studio
 
 ![](./media/image26.png)
 
-1.  Enter the folder name as **FabricMigration** and click the
+1. Enter the folder name as **FabricMigration** and click the
     **Create** button.
     ![](./media/image27.png)
 
-1.  Select **FabricMigration** folder
+1. Select **FabricMigration** folder
 
 ![](./media/image28.png)
 
-1.  Click **Upload**.
+1. Click **Upload**.
 
 ![](./media/image29.png)
 
-1.  Click on **Folder**.
+1. Click on **Folder**.
 
 ![](./media/image30.png)
 
@@ -156,23 +150,23 @@ Open Synapse Studio
 
 ![](./media/image31.png)
 
-1.  After selecting all the required files, click the **Upload** button
+1. After selecting all the required files, click the **Upload** button
     to add them to the destination folder.
 
 ![](./media/image32.png)
 
 ![](./media/image33.png)
 
-1.  Right-click on the folder and select **Properties.**
+1. Right-click on the folder and select **Properties.**
 
     ![](./media/image34.png)
 
-1.  Copy the **URL** path and save it in notepad to use
+1. Copy the **URL** path and save it in notepad to use
     it for later use
 
     ![](./media/image35.png)
 
-1.  Right-click on the **DimCustomer.csv** and select
+1. Right-click on the **DimCustomer.csv** and select
     **Properties.**
 
     ![](./media/image36.png)
@@ -183,27 +177,21 @@ Open Synapse Studio
 
 ## Task 4: Create a Fabric workspace
 
-In this task, you set up a new Microsoft Fabric workspace to serve as
-the central hub for the Medallion Architecture implementation. This
-workspace brings together all essential components, including
-Lakehouses, Dataflows, Pipelines, Warehouses, Notebooks, and Power BI
-assets.
-
-1.  Open your browser, navigate to the address bar, and type or paste
-    the following URL: +++https://app.fabric.microsoft.com/+++ then
+1. Open your browser, navigate to the address bar, and type or paste
+    the following URL: **https://app.fabric.microsoft.com/** then
     press the **Enter** button.
 
-1.  On the **Fabric Home** page click on **+ New Workspaces** as shown
+1. On the **Fabric Home** page click on **+ New Workspaces** as shown
     in the image below.
 
     ![A screenshot of a computer AI-generated content may be
     incorrect.](./media/image38.png)
 
-| Field                     | Value                                      |
-|--------------------------|--------------------------------------------|
-| Name                     | +++ FabricMigrationLab@lab.LabInstance.Id+++ |
-| Advanced                 | Select Fabric                              |
-| Default storage format   | Small dataset storage format               |
+    | Field                     | Value                                      |
+    |--------------------------|--------------------------------------------|
+    | Name                     | **FabricMigrationLab<inject key="DeploymentID" enableCopy="false"/>** |
+    | Advanced                 | Select Fabric                              |
+    | Default storage format   | Small dataset storage format               |
 
 1. Enter the following details in the **Create a workspace** pane, then click **Apply**.
 
@@ -215,7 +203,7 @@ assets.
 
 ## Task 5: Create a Lakehouse
 
-1. Click the **+New item** button.
+1. Click the **+ New item** button.
 
     ![](./media/image42.png)
 
@@ -223,59 +211,57 @@ assets.
 
     ![](./media/image43.png)
 
-1. Enter +++**SynapseMigrationLakehouse+++** in the **Name** field, then click **Create** and open the new lakehouse.
+1. Enter ****SynapseMigrationLakehouse**** in the **Name** field, then click **Create** and open the new lakehouse.
 
     ![](./media/image44.png)
 
     ![](./media/image45.png)
 
-## Task 5: Create Shortcut in the Files Section
+## Task 6: Create Shortcut in the Files Section
 
-1.  In the **Lakehouse**, select the **New Shortcut** tile
+1. In the **Lakehouse**, select the **New Shortcut** tile
 
-![](./media/image46.png)
+    ![](./media/image46.png)
 
-1.  From the list of external sources, select **Azure Data Lake Storage
-    Gen2** to create a new shortcut.
+1. From the list of external sources, select **Azure Data Lake Storage Gen2** to create a new shortcut.
 
-![](./media/image47.png)
+    ![](./media/image47.png)
 
-1.  Select **New connection**, enter the **ADLS Gen2 URI**, and then
+1. Select **New connection**, enter the **ADLS Gen2 URI**, and then
     click **Next** to proceed with creating the shortcut.
 
     ![](./media/image48.png)
 
-1.  Select **synapsefile** and click **Next**
+1. Select **synapsefile<inject key="DeploymentID" enableCopy="false"/>** and click **Next**
 
     ![](./media/image49.png)
 
-1.  Click **Create**
+1. Click **Create**
 
     ![](./media/image50.png)
 
-1.  Select the **synapsefile** folder to review the files.
+1. Expand the **Tables** section, select **synapsefile<inject key="DeploymentID" enableCopy="false"/>**, right-click it, and then choose **Move to Files**.
+
+    ![](./media/image50a.png)
+
+1. Select the **synapsefile** folder to review the files.
 
     ![](./media/image51.png)
 
-![](./media/image52.png)
+    ![](./media/image52.png)
 
 1. In the **Lakehouse** page, click **Open notebook** in the command bar and select **New notebook**.
 
-![](./media/image53.png)
+    ![](./media/image53.png)
 
 1. Replace the code in the cell with the following code, then click **▷ Run cell** to review the output.
 
-    ```python
-    df = spark.read.format("csv").load("Dimension_Customer File ABFSS URI ")
-    ```
-
-    Replace **Dimension_Customer** with the **ABFSS URI** from Task 3, Step 12.
-
-    **Example:**
 
     ```python
-    df = spark.read.format("csv").load("abfss://synapsefile@fabricsynapsegen21.dfs.core.windows.net/FabricMigration/Dimension_Customer.csv")
+    df = spark.read.format("csv").load("abfss://synapsefile<inject key="DeploymentID" enableCopy="false"/>@fabricsynapsegen2<inject key="DeploymentID" enableCopy="false"/>.dfs.core.windows.net/FabricMigration/DimCustomer.csv")
     ```
+
+    > **Note:** Replace **DimCustomer** with the **ABFSS URI** from Task 3, Step 12.
 
     ![](./media/image54.png)
 
@@ -303,45 +289,46 @@ assets.
 
     ![](./media/image59.png)
 
-1. Enter +++**Migrate_Pipeline+++** as the pipeline name and click **Create**.
+1. Enter ****Migrate_Pipeline**** as the pipeline name and click **Create**.
 
     ![](./media/image60.png)
 
     ![](./media/image61.png)
 
-1.  On newly created pipeline, select **Copy data** dropdown and
+1. On newly created pipeline, select **Copy data** dropdown and
     choose **Add copy data activity** option.
 
     ![](./media/image62.png)
 
-1.  With the **copy data** being selected, navigate to **Source** tab.
+1. With the **copy data** being selected, navigate to **Source** tab.
 
     ![](./media/image63.png)
 
-1.  Select the **Connection** dropdown and select **Browse all** option.
+1. Select the **Connection** dropdown and select **Browse all** option.
 
     ![](./media/image64.png)
 
-1.  Select **+ New** from the left pane
+1. Select **+ New** from the left pane
 
     ![](./media/image65.png)
 
-1.  From the data source options, select **Azure Data Lake Storage
+1. From the data source options, select **Azure Data Lake Storage
     Gen2** to begin the connection setup.
 
     ![](./media/image66.png)
 
-1.  Select **New connection**, enter the **ADLS Gen2 URI**, and then
-    click **Connect** to proceed with creating the shortcut.
+1. Select **New connection**, enter the **ADLS Gen2 URI**, and then click **Connect** to proceed with creating the shortcut.
 
     ![](./media/image67.png)
+    > **Note:** The ADLS Gen2 URI can be found on the **Overview** page of your Synapse Analytics workspace.
+        ![](./media/image67b.png)
 
 1. In the **Source** tab of the Copy Data activity, click the
     **Browse** button to select the folder containing the source files.
 
     ![](./media/image68.png)
 
-1. Select the **Fact_Order.csv** file and click **OK**.
+1. Select the **DimProduct.csv** file and click **OK**.
 
     ![](./media/image69.png)
 
@@ -351,17 +338,17 @@ assets.
 
 1. In the destination selection window, select **OneLake catalog** from the left pane and then select **synapseMigrationLakehouse**.
 
-![](./media/image71.png)
+    ![](./media/image71.png)
 
-1. In the **Source** tab, select **DelimitedText** as the file format.
+1. In the **Source** tab, select **Binary** as the file format.
+
+    ![](./media/image73.png)
+
+1. Under the **Destination** tab, select **Files**. Then click **Browse**, navigate to the **FabricMigration** folder, and choose it. Finally, set the **file format** to **Binary**.
 
     ![](./media/image72.png)
 
-1. Under the **Destination** tab, click **+ New**.
-
-![](./media/image73.png)
-
-1. Enter the table name as +++**dim_Date+++** and click **Create**.
+1. Enter the table name as ****dim_Date**** and click **Create**.
 
     ![](./media/image74.png)
 
@@ -381,54 +368,9 @@ assets.
 
     ![](./media/image79.png)
 
-## Task 8: Delete the Resources
-
-1. Search for **Resource groups** in the Azure portal and select it under **Services**.
-
-![A screenshot of a computer Description automatically
-generated](./media/image80.png)
-
-1.  In the Resource groups page, select your resource group.
-
-1.  On the **Resource Group** home page, select all resources and then
-    click **Delete**.
-
-![](./media/image81.png)
-
-1. In the **Delete Resources** pane, type "delete" in the confirmation field and click **Delete**.
-
-    ![](./media/image82.png)
-
-![](./media/image83.png)
-
-1. Go to the Microsoft Fabric workspace at +++https://app.fabric.microsoft.com/+++.
-
-1. Select the **...** option under the workspace name and choose **Workspace settings**.
-
-    ![](./media/image84.png)
-
-1. Select **General** and choose **Remove this workspace**.
-
-    ![A screenshot of a computer AI-generated content may be
-    incorrect.](./media/image85.png)
-
-1. Click **Delete** in the confirmation dialog.
-
-    ![](./media/image86.png)
-
-1.  Wait for a notification that the Workspace has been deleted, before
-    proceeding to the next lab.
-
-    ![](./media/image87.png)
-
-**Summary**
+## Review
 
 In this lab, you successfully migrated data and basic pipeline
-functionality from Azure Synapse Analytics to Microsoft Fabric. You
-created and configured necessary resources in both platforms, accessed
-and transformed data using Lakehouse and notebooks, and rebuilt
-pipelines to enable data movement within Fabric.
+functionality from Azure Synapse Analytics to Microsoft Fabric. You created and configured necessary resources in both platforms, accessed and transformed data using Lakehouse and notebooks, and rebuilt pipelines to enable data movement within Fabric.
 
-This lab demonstrates how Microsoft Fabric simplifies data integration
-and analytics by providing a unified platform, making it easier to
-modernize existing Synapse-based solutions.
+This lab demonstrates how Microsoft Fabric simplifies data integration and analytics by providing a unified platform, making it easier to modernize existing Synapse-based solutions.

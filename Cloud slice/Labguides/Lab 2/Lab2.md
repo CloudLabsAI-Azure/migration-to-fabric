@@ -1,6 +1,8 @@
-## **Lab 2: Migrate Azure Synapse Analytics SQL objects to Fabric Data Warehouse**
+## Lab 2: Migrate Azure Synapse Analytics SQL objects to Fabric Data Warehouse
 
-**Introduction**
+### Estimated Duration: 120 Minutes
+
+## Overview
 
 This lab focuses on migrating SQL objects and data from **Azure Synapse
 Analytics (Dedicated SQL Pool)** to **Microsoft Fabric Data Warehouse**.
@@ -9,87 +11,74 @@ connection to Synapse, and use pipelines to copy data into OneLake. The
 lab also covers validating migrated data and scheduling pipelines for
 automated data movement.
 
-**Objective**
+## Objectives
 
 By the end of this lab, you will be able to:
 
-- Create a **Data Warehouse** in Microsoft Fabric
-
-- Establish a **linked connection** to Azure Synapse SQL
-
-- Build and execute a **data pipeline** to copy data from Synapse to
-  Fabric
-
-- Load data into **Fabric Warehouse tables** using Copy Data activity
-
-- Validate data migration using **SQL queries**
-
-- Schedule pipelines for **automated execution**
+- Task 1: Create a Warehouse
+- Task 2: Create Linked Connection to Synapse SQL
+- Task 3: Schedule the Pipeline
 
 ## Task 1: Create a Warehouse
 
-1.  Navigate to +++https://app.fabric.microsoft.com/+++ then
+1. Navigate to **https://app.fabric.microsoft.com/** then
     press the **Enter** button.
 
-1.  Create a new Warehouse by clicking on the **+New item** button in
+1. Create a new Warehouse by clicking on the **+New item** button in
     the navigation bar.
 
-1.  Click on the "**Warehouse**" tile.
+1. Click on the "**Warehouse**" tile.
 
-![](./media/image1.png)
+    ![](./media/image1.png)
 
-1.  In the **New warehouse** dialog box,
-    enter **+++sqlpoolmigrate+++** in the **Name** field, click **Create** and open the new warehouse.
+1. In the **New warehouse** dialog box, enter ****sqlpoolmigrate**** in the **Name** field, click **Create** and open the new warehouse.
 
-![](./media/image2.png)
+    ![](./media/image2.png)
 
-![](./media/image3.png)
+    ![](./media/image3.png)
 
-1.  Click on **Fabric_migration<inject key="DeploymentID" enableCopy="false"/>** workspace in the left-sided
-    navigation bar ![](./media/image4.png)
+1. Click on **Fabric_migration<inject key="DeploymentID" enableCopy="false"/>** workspace in the left-sided navigation bar     
+
+    ![](./media/image4.png)
 
 ## Task 2: Create Linked Connection to Synapse SQL
 
-1.  In the **Fabric_migrationXXX** page, select +**New item**. Then,
-    click **Pipeline** to view the full list of available items under
-    Get data.
+1. In the **Fabric_migration<inject key="DeploymentID" enableCopy="false"/>** page, select **+ New item**, then click **Pipeline** to view the full list of available items under **Get data**.
 
-![](./media/image5.png)
+    ![](./media/image5.png)
 
-1.  On the **New** **pipeline** dialog box, in the **Name** field, enter
-    +++**sqlpool_migratepipeline+++** and click on
-    the **Create** button.
+1. In the **New pipeline** dialog box, enter **sqlpool_migratepipeline** in the **Name** field, then click **Create**.
 
-![](./media/image6.png)
+    ![](./media/image6.png)
 
-1.  On newly created pipeline, select **Copy data** dropdown and
+1. On newly created pipeline, select **Copy data** dropdown and
     choose **Add copy data activity** option.
 
-![](./media/image7.png)
+    ![](./media/image7.png)
 
-1.  With the **copy data** being selected, navigate to **Source** tab.
+1. With the **copy data** being selected, navigate to **Source** tab.
 
-![](./media/image8.png)
+    ![](./media/image8.png)
 
-1.  Select the **Connection** dropdown and select **Browse all** option.
+1. Select the **Connection** dropdown and select **Browse all** option.
 
-![](./media/image9.png)
+    ![](./media/image9.png)
 
-1.  Select **+ New** from the left pane![](./media/image10.png)
+1. Select **+ New** from the left pane    ![](./media/image10.png)
 
-1.  From the data source options, select **Azure Synapse Analytics (SQL
+1. From the data source options, select **Azure Synapse Analytics (SQL
     DW)** to begin the connection setup.
 
-![](./media/image11.png)
+    ![](./media/image11.png)
 
-1.  Select **New Connection → Azure Synapse Analytics (SQL)**
+1. Select **New Connection → Azure Synapse Analytics (SQL)**
 
-1.  Enter details:
+1. Enter details:
 
     - **Server name:**
       \<your-synapse-sql-endpoint\>.sql.azuresynapse.net
 
-    - **Database:** your dedicated sql pool
+    - **Database:** sql dedicated pool
 
     - **Authentication:** Basic
 
@@ -97,157 +86,113 @@ By the end of this lab, you will be able to:
 
     - **Password:** password321!
 
-![](./media/image12.png)
+    ![](./media/image12.png)
 
-1.  Open the **Table** dropdown and select the **fabric_employee**
+1. Open the **Table** dropdown and select the **fabric_employee**
     table.
 
-![](./media/image13.png)
+    ![](./media/image13.png)
 
-![](./media/image14.png)
+    ![](./media/image14.png)
 
-1.  Now, navigate to **destination** tab.
+1. Now, navigate to **destination** tab.
 
-![](./media/image15.png)
+    ![](./media/image15.png)
 
-1.  Click **Destination** tab
+1. Click **Destination** tab
 
-![](./media/image16.png)
+    ![](./media/image16.png)
 
-1.  On choose a destination window, select **OneLake catalog** from the
+1. On choose a destination window, select **OneLake catalog** from the
     left pane and select the **sqlpoolmigrate**.
 
-![](./media/image17.png)
+    ![](./media/image17.png)
 
-![](./media/image18.png)
+    ![](./media/image18.png)
 
-1.  Under the Destination tab, select the **Auto create** *table* option
+1. Under the Destination tab, select the **Auto create** *table* option
     and specify the table as **dbo.employee** for the data load.
 
-![](./media/image19.png)
+    ![](./media/image19.png)
 
-1.  Click on **Run** to run the copy data.
+1. Click on **Run** to run the copy data.
 
-![](./media/image20.png)
+    ![](./media/image20.png)
 
-1.  Click on **Save and run** button so that pipeline will be save and
+1. Click on **Save and run** button so that pipeline will be save and
     run.
 
-![](./media/image21.png)
+    ![](./media/image21.png)
 
-![](./media/image22.png)
+    ![](./media/image22.png)
 
-![](./media/image23.png)
+    ![](./media/image23.png)
 
 1. After the successful execution of the pipeline, go to your SQL
     analytics endpoint Lakehouse and open the explorer to see the
     imported data.
 
-![](./media/image24.png)
+    ![](./media/image24.png)
 
-![](./media/image25.png)
+    ![](./media/image25.png)
 
-1.  Select **New SQL query** to write your SQL statements.
+1. Select **New SQL query** to write your SQL statements.
 
-![](./media/image26.png)
+    ![](./media/image26.png)
 
-1.  Paste the code as shown in the image below, then click the **Play**
-    icon to run it and observe the counts in the output.
+1. Paste the code as shown in the image below, then click the **Play** icon to run it and observe the counts in the output.
 
-+++SELECT COUNT(*) FROM dbo.employee;+++
+    ```
+    SELECT COUNT(*) FROM dbo.employee;
+    ```
 
-![](./media/image27.png)
+    ![](./media/image27.png)
 
-SELECT TOP 10 \* FROM dbo.employee;
+    ```
+    SELECT TOP 10 \* FROM dbo.employee;
+    ```
+    ![](./media/image28.png)
 
-![](./media/image28.png)
+1. Compare row counts with Synapse: return to the Synapse workspace, navigate to **Develop**, and select **SQL script**.
 
-1.  Compare row counts with Synapse: return to the Synapse workspace,
-    navigate to **Develop**, and select **SQL script**.
+    ![](./media/image29.png)
 
-![](./media/image29.png)
-
-1.  Ensure that the SQL script is connected to the **SQL dedicated
+1. Ensure that the SQL script is connected to the **SQL dedicated
     pool** by selecting it from both the 'Connect to' dropdown and the
     **Use database** dropdown, as highlighted in the image
 
-![](./media/image30.png)
+    ![](./media/image30.png)
 
-1.  Enter the following code into the editor and click **Run** to
+1. Enter the following code into the editor and click **Run** to
     execute it
 
-![](./media/image31.png)
+    ```
+    SELECT COUNT(*) FROM dbo.fabric_employee;
+    ```
 
-SQL
+    ![](./media/image31.png)
 
-+++SELECT TOP 10 * FROM dbo.employee;+++
-
-![](./media/image32.png)
+    ![](./media/image32.png)
+    > **Note:** we had renamed *dbo.fabric_employee* to *dbo.employee* for migration
 
 ## Task 3: Schedule the Pipeline
 
-1.  Now, click on **Fabric_migration -XX** on the left-sided navigation
-    pane and select **sql_migratepipeline**.
+1. Navigate back to the Fabric portal, click **Fabric_migration<inject key="DeploymentID" enableCopy="false"/>** in the left navigation pane, and then select **sql_migratepipeline**.
 
-![](./media/image33.png)
+    ![](./media/image33.png)
 
-1.  Click **Schedule**.
+1. Click **Schedule**.
 
-![](./media/image34.png)
+    ![](./media/image34.png)
 
-1.  Select **+ Add schedule** and configure the schedule as required
-    then select **Save** and close the **Schedule** panel.
+1. Select **+ Add schedule** and configure the schedule as required then select **Save** and close the **Schedule** panel.
 
-**Note**: The example here schedules the pipeline to execute daily at
-8:00 PM until the end of the year.
+    > **Note**: The example here schedules the pipeline to execute daily at 8:00 PM until the end of the year.
 
-![](./media/image35.png)
+    ![](./media/image35.png)
 
-![](./media/image36.png)
+    ![](./media/image36.png)
 
-## Task 4: Delete the Resources
+## Review
 
-1.  Search for **Resource groups** in the Azure portal
-    search bar, navigate and click on **Resource
-    groups** under **Services**.
-
-![A screenshot of a computer Description automatically
-generated](./media/image37.png)
-
-1.  Select your resource group.
-
-1.  Select all resources and click **Delete**.
-
-![](./media/image38.png)
-
-1.  In the **Delete Resources** pane, type "delete" in the confirmation field and click **Delete**.
-
-![](./media/image39.png)
-
-![](./media/image40.png)
-
-1.  Go to the Microsoft Fabric workspace at +++https://app.fabric.microsoft.com/+++.
-
-1.  Select the **...** option under the workspace name and
-    select **Workspace settings**.
-
-![](./media/image41.png)
-
-1.  Select **General** and **Remove this workspace**.
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image42.png)
-
-1.  Click on **Delete** in the warning that pops up.
-
-![](./media/image43.png)
-
-**Summary**
-
-In this lab, you successfully migrated data from Azure Synapse Analytics
-to Microsoft Fabric Data Warehouse. You created a new warehouse,
-configured a pipeline with a Synapse SQL source, and loaded data into
-Fabric using OneLake. After executing the pipeline, you validated the
-data by comparing row counts between Synapse and Fabric. Finally, you
-scheduled the pipeline to automate recurring data transfers, ensuring a
-streamlined and scalable migration process.
+In this lab, you successfully migrated data from Azure Synapse Analytics to Microsoft Fabric Data Warehouse. You created a new warehouse, configured a pipeline with a Synapse SQL source, and loaded data into Fabric using OneLake. After executing the pipeline, you validated the data by comparing row counts between Synapse and Fabric. Finally, you scheduled the pipeline to automate recurring data transfers, ensuring a streamlined and scalable migration process.

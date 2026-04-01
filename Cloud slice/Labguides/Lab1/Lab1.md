@@ -236,7 +236,7 @@ By the end of this lab, you will be able to:
 
     ![](./media/image56.png)
 
-1. In the **New Linked Service** setup, configure the connection to the Synapse SQL dedicated pool by selecting the **Azure subscription**, **server name**, and **database name**. Enter the **User name** as **sqladmin** and the **password** as **password321!**, then click **Test connection**. If the test is successful, click **Create**.
+1. In the **New Linked Service** setup, configure the connection to the Synapse SQL dedicated pool by selecting the **Azure subscription**, **server name**, and **database name**. Enter the **User name** as *sqladmin* and the *password* as **password321!**, then click **Test connection**. If the test is successful, click **Create**.
 
     ![](./media/image58.png)
 
@@ -462,9 +462,9 @@ By the end of this lab, you will be able to:
     | Field    | Value                                              |
     |----------|----------------------------------------------------|
     | Server   | Dedicated SQL server URL (from Task 2 → Step 7)    |
-    | Database | fabric-synapse<inject key="DeploymentID" enableCopy="false"/>                  |
+    | Database | sql dedicated pool                  |
     | Username | sqladmin                                           |
-    | Password | Password321!                                       |
+    | Password | password321!                                       |
 
     ![](./media/image109.png)
 
@@ -512,7 +512,6 @@ warehouse.
 
 1. Enter the following code into the editor and click **Run** to execute it:
 
-    **SQL**
     ```
     SELECT DISTINCT CASE 
             WHEN len(tt) = 0
@@ -558,7 +557,7 @@ warehouse.
     state for more than 40 minutes and is not being used, your account might
     get disabled
 
-## Summary
+## Review
 
 In this lab, you successfully performed a full migration journey from
 **Azure Synapse Analytics dedicated SQL pools** to **Microsoft Fabric
