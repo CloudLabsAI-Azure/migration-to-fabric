@@ -1,4 +1,4 @@
-## Day 01: Migrate to Microsoft Fabric
+# Day 01: Migrate to Microsoft Fabric
 
 ## Overall Estimated Duration: 4 Hours
 
@@ -68,7 +68,7 @@ Welcome to your Migrate to Microsoft Fabric Workshop, Let's begin by making the 
 
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
 
-![Access Your VM and Lab Guide](./media/guideee.png)
+![Access Your VM and Lab Guide](./media/guide1.png)
 
 ## Lab Guide Zoom In/Zoom Out
 
