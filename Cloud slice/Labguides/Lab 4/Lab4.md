@@ -132,10 +132,6 @@ created for the demo.
 
 1. Navigate to **https://app.fabric.microsoft.com/** and press **Enter**.
 
-1. In the **Microsoft Fabric** window, enter your credentials and click **Submit**.
-
-    ![](./media/image30.png)
-
 1. On the Microsoft Fabric home page, select **New workspace**.
 
     ![](./media/image34.png)

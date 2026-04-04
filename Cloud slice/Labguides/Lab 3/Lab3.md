@@ -51,7 +51,7 @@ By the end of this lab, you will be able to:
     New: **synapsefile<inject key="DeploymentID" enableCopy="false"/>**
 1. Enter the following details, then click **Next: Security >**.
 
-        ![](../Lab1/media/image9.png)
+    ![](../Lab1/media/image9.png)
 
 1. Configure the **Security** settings by selecting **both Microsoft
     
@@ -59,7 +59,7 @@ By the end of this lab, you will be able to:
     - **SQL Password**: password321!
     - Click **Review + create**
 
-    ![](../Lab1/media/image11.png)
+        ![](../Lab1/media/image11.png)
 
 1. In the **Review + submit** tab, once the validation is passed, click on the **Create** button.
 
@@ -127,47 +127,42 @@ Open Synapse Studio
 
 1. Click **+ New folder**.
 
-![](./media/image26.png)
+    ![](./media/image26.png)
 
-1. Enter the folder name as **FabricMigration** and click the
-    **Create** button.
+1. Enter the folder name as **FabricMigration** and click the **Create** button.
     ![](./media/image27.png)
 
 1. Select **FabricMigration** folder
 
-![](./media/image28.png)
+    ![](./media/image28.png)
 
 1. Click **Upload**.
 
-![](./media/image29.png)
+    ![](./media/image29.png)
 
 1. Click on **Folder**.
 
-![](./media/image30.png)
+    ![](./media/image30.png)
 
-1. Browse to **C:\LabFiles\LabFiles\Lab1** on your VM, then
-    select **all** file except DACPAC file and click on **Open** button.
+1. Browse to **C:\LabFiles\LabFiles\Lab1** on your VM, then, select **all** file except DACPAC file and click on **Open** button.
 
-![](./media/image31.png)
+    ![](./media/image31.png)
 
-1. After selecting all the required files, click the **Upload** button
-    to add them to the destination folder.
+1. After selecting all the required files, click the **Upload** button to add them to the destination folder.
 
-![](./media/image32.png)
+    ![](./media/image32.png)
 
-![](./media/image33.png)
+    ![](./media/image33.png)
 
 1. Right-click on the folder and select **Properties.**
 
     ![](./media/image34.png)
 
-1. Copy the **URL** path and save it in notepad to use
-    it for later use
+1. Copy the **URL** path and save it in notepad to use it for later use
 
     ![](./media/image35.png)
 
-1. Right-click on the **DimCustomer.csv** and select
-    **Properties.**
+1. Right-click on the **DimCustomer.csv** and select **Properties.**
 
     ![](./media/image36.png)
 
@@ -177,9 +172,7 @@ Open Synapse Studio
 
 ## Task 4: Create a Fabric workspace
 
-1. Open your browser, navigate to the address bar, and type or paste
-    the following URL: **https://app.fabric.microsoft.com/** then
-    press the **Enter** button.
+1. Open your browser, navigate to the address bar, and type or paste the following URL: **https://app.fabric.microsoft.com/** then press the **Enter** button.
 
 1. On the **Fabric Home** page click on **+ New Workspaces** as shown
     in the image below.
@@ -254,14 +247,11 @@ Open Synapse Studio
 
     ![](./media/image53.png)
 
-1. Replace the code in the cell with the following code, then click **▷ Run cell** to review the output.
-
+1. Replace the code in the cell with the following code, then click **▷ Run cell** to review the output. Replace **DimCustomer** with the **ABFSS URI** from Task 3, Step 12.
 
     ```python
     df = spark.read.format("csv").load("abfss://synapsefile<inject key="DeploymentID" enableCopy="false"/>@fabricsynapsegen2<inject key="DeploymentID" enableCopy="false"/>.dfs.core.windows.net/FabricMigration/DimCustomer.csv")
     ```
-
-    > **Note:** Replace **DimCustomer** with the **ABFSS URI** from Task 3, Step 12.
 
     ![](./media/image54.png)
 
@@ -320,11 +310,12 @@ Open Synapse Studio
 1. Select **New connection**, enter the **ADLS Gen2 URI**, and then click **Connect** to proceed with creating the shortcut.
 
     ![](./media/image67.png)
-    > **Note:** The ADLS Gen2 URI can be found on the **Overview** page of your Synapse Analytics workspace.
-        ![](./media/image67b.png)
 
-1. In the **Source** tab of the Copy Data activity, click the
-    **Browse** button to select the folder containing the source files.
+    > **Note:** The ADLS Gen2 URI can be found on the **Overview** page of your Synapse Analytics workspace.
+    
+    ![](./media/image67b.png)
+
+1. In the **Source** tab of the Copy Data activity, click the **Browse** button to select the folder containing the source files.
 
     ![](./media/image68.png)
 
