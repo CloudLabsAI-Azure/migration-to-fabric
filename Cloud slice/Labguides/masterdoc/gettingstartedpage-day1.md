@@ -4,7 +4,7 @@
 
 ### Overview
 
-In this day's labs, you will gain comprehensive, hands-on experience in migrating data and metadata from **Azure Synapse Analytics** to **Microsoft Fabric Data Warehouse**. As organizations modernize their analytics platforms, Microsoft Fabric offers a unified, scalable, and fully integrated environment that simplifies data engineering, warehousing, real-time analytics, and business intelligence. 
+In this hands-on lab, you will gain comprehensive, hands-on experience in migrating data and metadata from **Azure Synapse Analytics** to **Microsoft Fabric Data Warehouse**. As organizations modernize their analytics platforms, Microsoft Fabric offers a unified, scalable, and fully integrated environment that simplifies data engineering, warehousing, real-time analytics, and business intelligence. 
 
 Throughout these labs, you will create and configure Azure Synapse components, ingest sample datasets, integrate them through pipelines, set up a new Fabric workspace, and use the **Fabric Migration Assistant** to seamlessly migrate SQL objects and data into the Fabric Data Warehouse. You will learn to establish connections between Synapse and Fabric, validate migrated data, and schedule pipelines for automated data movement, ensuring business continuity throughout the migration process.
 

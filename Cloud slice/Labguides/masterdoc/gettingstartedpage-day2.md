@@ -4,7 +4,7 @@
 
 ### Overview
 
-In this day's labs, you will gain advanced hands-on experience in migrating complex data workloads and pipeline orchestration from **Azure Synapse Analytics** and **Azure Data Factory** to **Microsoft Fabric**. Building on the foundational knowledge from Day 1, you will now work with unstructured data, create Lakehouse structures, and migrate complete data integration pipelines. These labs demonstrate how Microsoft Fabric provides a unified platform that eliminates the need for multiple disparate tools by combining data engineering, data warehousing, and data factory capabilities in a single integrated environment.
+In this hands-on lab, you will gain advanced hands-on experience in migrating complex data workloads and pipeline orchestration from **Azure Synapse Analytics** and **Azure Data Factory** to **Microsoft Fabric**. Building on the foundational knowledge from Day 1, you will now work with unstructured data, create Lakehouse structures, and migrate complete data integration pipelines. These labs demonstrate how Microsoft Fabric provides a unified platform that eliminates the need for multiple disparate tools by combining data engineering, data warehousing, and data factory capabilities in a single integrated environment.
 
 Throughout these labs, you will create Lakehouse structures, establish shortcuts to external storage sources, transform data using Spark notebooks, rebuild complex pipelines, and validate successful data ingestion. You will learn how to leverage Fabric's native capabilities to modernize Synapse Spark workloads and migrate Azure Data Factory pipelines, enabling seamless data workflows and automation within the Fabric ecosystem.
 
