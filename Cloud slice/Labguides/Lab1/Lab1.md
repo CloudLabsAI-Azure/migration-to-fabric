@@ -35,7 +35,7 @@ By the end of this lab, you will be able to:
 
 ## Task 1: Create a Synapse workspace in the Azure portal
 
-1. In the search bar enter **Synapse** and select **Azure Synapse Analytics.** Search for **Synapse Analytics**.
+1. In the search bar enter **Synapse** and select **Azure Synapse Analytics** 
 
     ![](./media/image5.png)   
 
@@ -154,7 +154,7 @@ By the end of this lab, you will be able to:
 
     ![](./media/image30.png)
 
-1. The **paraquest** file uploaded successfully.
+1. The **NYCTripSmall.parquet** file uploaded successfully.
 
 1. Repeat the same steps to upload the remaining **DimDate.csv,
     Dimension_Employee.csv** files
@@ -314,7 +314,7 @@ By the end of this lab, you will be able to:
     |------------------------|-----------------------------------------------------------------------|
     | Name                   | **Fabric_Migration<inject key="DeploymentID" enableCopy="false"/>**  |
     | Advanced               | Select Fabric                                                         |
-    | Default storage format | Small dataset storage format                                           |
+    | Default storage format | Small semantic model storage format                                           |
 
     ![](./media/image77.png)
 
@@ -337,9 +337,9 @@ By the end of this lab, you will be able to:
 
     ![](./media/image81.png)
 
-1. On the **Choose your method** screen, keep the default option **Upload a file with the source metadata**, then click **Next**.
-
-    ![](./media/image82.png)
+1. Select **Next**.
+    > **Note:** You may see the **Choose your method** screen select the default option **Upload a file with the source metadata**, then click **Next**.
+        ![](./media/image82.png)
 
 1. Click **Choose file**
 
@@ -424,20 +424,21 @@ By the end of this lab, you will be able to:
 1. To use Copilot for AI-powered assistance in resolving errors, select **Fix query errors** in the **Suggested action** section. Copilot will update the script with recommended changes. Since it is AI-driven, review the suggestions carefully and make any necessary adjustments.
 
     ![](./media/image101.png)
+    > **Note:** If **Step 4** does not complete successfully, you may need to run it again. Since this step is AI-assisted, occasional inconsistencies can occur. Simply repeat the step until it executes correctly.
 
 1. Select **Run** to validate and create the object.
 
     ![](./media/image102.png)
 
-1. The next script to be fixed opens.
+1. The script executes successfully.
 
     ![](./media/image103.png)
 
 1. Continue to fix the rest of the scripts. You can choose to skip fixing scripts that you don't need during this step.
 
-1. Once all required metadata is ready for migration, click the **Back** button in the **Fix problems** pane to return to the top-level view of the Migration Assistant. Then, mark the **2. Fix problems** step as complete in the Migration Assistant.
-
     ![](./media/image104.png)
+
+1. Once all required metadata is ready for migration, click the **Back** button in the **Fix problems** pane to return to the top-level view of the Migration Assistant. Then, mark the **2. Fix problems** step as complete in the Migration Assistant.
 
 ## Task 8: Copy data using Migration Assistant
 

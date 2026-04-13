@@ -24,6 +24,8 @@ By the end of this lab, you will be able to:
 1. Navigate to **https://app.fabric.microsoft.com/** then
     press the **Enter** button.
 
+1. Proceed to the workspace **Fabric_Migration<inject key="DeploymentID" enableCopy="false"/>** that you created in **Lab 1**. 
+
 1. Create a new Warehouse by clicking on the **+New item** button in
     the navigation bar.
 
@@ -31,7 +33,7 @@ By the end of this lab, you will be able to:
 
     ![](./media/image1.png)
 
-1. In the **New warehouse** dialog box, enter ****sqlpoolmigrate**** in the **Name** field, click **Create** and open the new warehouse.
+1. In the **New warehouse** dialog box, enter **sqlpoolmigrate** in the **Name** field, click **Create** and open the new warehouse.
 
     ![](./media/image2.png)
 
@@ -149,7 +151,7 @@ By the end of this lab, you will be able to:
     ![](./media/image27.png)
 
     ```
-    SELECT TOP 10 \* FROM dbo.employee;
+    SELECT TOP 10 * FROM dbo.employee;
     ```
     ![](./media/image28.png)
 
@@ -196,3 +198,4 @@ By the end of this lab, you will be able to:
 ## Review
 
 In this lab, you successfully migrated data from Azure Synapse Analytics to Microsoft Fabric Data Warehouse. You created a new warehouse, configured a pipeline with a Synapse SQL source, and loaded data into Fabric using OneLake. After executing the pipeline, you validated the data by comparing row counts between Synapse and Fabric. Finally, you scheduled the pipeline to automate recurring data transfers, ensuring a streamlined and scalable migration process.
+
