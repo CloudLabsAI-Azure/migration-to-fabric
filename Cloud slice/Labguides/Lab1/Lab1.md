@@ -494,7 +494,7 @@ By the end of this lab, you will be able to:
 
 1. Review and fix the broken scripts using the error information and documentation.
 
-1. Click **Run (1)** to execute the script, and if any issues are detected, select **Fix query errors (2)** in the **Suggested action** section. Copilot will update the script with recommended changes. Since it is AI-driven, review the suggestions carefully and make any necessary adjustments.
+1. Click **Run (1)** to execute the script, and if any issues are detected, select **Fix query errors (2)** in the **Suggested action** section, then click on **Accept** to keep the changes suggested by Copilot will update the script with recommended changes. Since it is AI-driven, review the suggestions carefully and make any necessary adjustments.
 
     ![](./media/new11.png)
 
@@ -584,7 +584,8 @@ warehouse.
 
     ![](./media/image117.png)
 
-1. Enter the following code **(1)** into the editor and click **Run (2)** to execute it:
+1. Enter the following code **(1)** into the editor and click **Run (2)** to execute it. This query is used to identify which applications, users, and IP addresses are connecting to an Azure Synapse Dedicated SQL Pool for monitoring and auditing purposes.
+
 
     ```
     SELECT DISTINCT CASE 
