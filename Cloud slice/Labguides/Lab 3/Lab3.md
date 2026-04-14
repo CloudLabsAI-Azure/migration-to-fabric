@@ -74,19 +74,19 @@ By the end of this lab, you will be able to:
 
 1. In the **Review + submit** tab, once the validation is passed, click on the **Create** button.
 
-    ![](../Lab1/media/image12.png)
+     ![](../Lab1/media/image12.png)
 
 1. This deployment may take a few minutes.
 
-    ![](../Lab1/media/image13.png)
+     ![](../Lab1/media/image13.png)
 
 1. Click on **Go to resource group** button.
 
-    ![](../Lab1/media/image14.png)
+     ![](../Lab1/media/image14.png)
 
 1. Click on your **fabric-synapse<inject key="DeploymentID" enableCopy="false"/>** workspace from the list.
 
-    ![](../Lab1/media/image15.png) 
+     ![](../Lab1/media/image15.png) 
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task.
