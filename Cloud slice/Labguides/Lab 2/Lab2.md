@@ -16,6 +16,8 @@ By the end of this lab, you will be able to:
 
 ## Task 1: Create a Warehouse
 
+In this task, you will create a new warehouse in Microsoft Fabric to store migrated data.
+
 1. Open your browser and navigate to the following URL to open **Microsoft Fabric** portal: 
 
     ```
@@ -46,6 +48,8 @@ By the end of this lab, you will be able to:
 
 ## Task 2: Create Linked Connection to Synapse SQL
 
+ In this task, you will establish a connection between Microsoft Fabric and Azure Synapse Analytics to copy and validate data.
+
 1. Select **Workspaces (1)** from the left navigation pane, and then choose **Fabric_Migration<inject key="DeploymentID" enableCopy="false"/> (2)** from the list.
 
     ![](./media/new0.png)
@@ -58,7 +62,7 @@ By the end of this lab, you will be able to:
 
     ![](./media/new2.png)
 
-1. On newly created pipeline, select **Copy data (1)** dropdown and choose **Add copy data activity (2)** option.
+1. On newly created pipeline, select **Copy data (1)** dropdown and choose **Add copy data activity (2)** option.
 
     ![](./media/image7.png)
 
@@ -104,7 +108,7 @@ By the end of this lab, you will be able to:
 
     ![](./media/image16.png)
 
-1. On choose a destination window, select **OneLake catalog** from the left pane and select the **sqlpoolmigrate**.
+1. On choose a destination window, select **OneLake catalog** from the left pane and select the **sqlpoolmigrate**.
 
     ![](./media/image17.png)
 
@@ -185,6 +189,8 @@ By the end of this lab, you will be able to:
 <validation step="01133add-9237-42c6-b39e-0dd25c717758" />    
 
 ## Task 3: Schedule the Pipeline
+
+In this task, you will configure a schedule to automate pipeline execution for recurring data migration.
 
 1. Navigate back to the Fabric portal, click **Fabric_migration<inject key="DeploymentID" enableCopy="false"/>** in the left navigation pane, and then select **sql_migratepipeline**.
 

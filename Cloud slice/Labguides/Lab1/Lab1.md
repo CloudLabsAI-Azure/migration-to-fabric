@@ -25,7 +25,7 @@ By the end of this lab, you will be able to:
 
 ## Task 1: Create a Synapse workspace in the Azure portal
 
-1. In the Azure portal search bar, search for **Synapse Analytics (1)** and select **Azure Synapse Analytics (2).** 
+1. In the Azure portal search bar, search for **Synapse Analytics (1)** and select **Azure Synapse Analytics (2).** 
 
      ![](./media/image5.png)   
 
@@ -33,15 +33,15 @@ By the end of this lab, you will be able to:
 
      ![](./media/image6.png)
 
-1. Enter below details to create resource group and then click on **OK**.
+1. Enter below details to create resource group and then click on **OK**.
 
-    - **Subscription**: Select the default subscription **(1)**
+    - **Subscription**: Select the default subscription **(1)**
 
     - **Resource Group**: Select the **fabric-rg (1)** Resource group
 
-    - **Workspace name**: Enter **fabric-synapse<inject key="DeploymentID" enableCopy="false"/> (3)**
+    - **Workspace name**: Enter **fabric-synapse<inject key="DeploymentID" enableCopy="false"/> (3)**
 
-    - **Region**: <inject key="Region" enableCopy="false"/> **(4)**
+    - **Region**: <inject key="Region" enableCopy="false"/> **(4)**
 
         ![](./media/image7.png)
 
@@ -51,7 +51,7 @@ By the end of this lab, you will be able to:
 
     - **New:** **fabricsynapsegen2<inject key="DeploymentID" enableCopy="false"/> (1)**
 
-    - Click **OK (2)**
+    - Click **OK (2)**
 
         ![](./media/image8.png)
 
@@ -59,9 +59,9 @@ By the end of this lab, you will be able to:
 
     - New: **synapsefile<inject key="DeploymentID" enableCopy="false"/> (2)**
 
-    - Click **OK (3)**.
+    - Click **OK (3)**.
 
-    - Now, click on **Next: Security > (4)**.
+    - Now, click on **Next: Security > (4)**.
 
         ![](./media/image9.png)
 
@@ -83,11 +83,11 @@ By the end of this lab, you will be able to:
 
     ![](./media/image13.png)
 
-1. Click on **Go to resource group** button.
+1. Click on **Go to resource group** button.
 
     ![](./media/image14.png)
 
-1. Click on your **fabric-synapse<inject key="DeploymentID" enableCopy="false"/>** workspace from the list.
+1. Click on your **fabric-synapse<inject key="DeploymentID" enableCopy="false"/>** workspace from the list.
 
     ![](./media/image15.png)
 
@@ -109,7 +109,7 @@ By the end of this lab, you will be able to:
 
      ![](./media/image17.png)
 
-1. Select **SQL pools (1)** under **Analytics pools** and then click on **+ New (2)** to create a new SQL pool.
+1. Select **SQL pools (1)** under **Analytics pools** and then click on **+ New (2)** to create a new SQL pool.
 
      ![](./media/new0.png)
 
@@ -155,7 +155,7 @@ By the end of this lab, you will be able to:
 
      ![](./media/image25.png)
 
-1. Select the container named **synapsefile<inject key="DeploymentID" enableCopy="false"/> (Primary)**.
+1. Select the container named **synapsefile<inject key="DeploymentID" enableCopy="false"/> (Primary)**.
 
      ![](./media/image26.png)
 
@@ -171,7 +171,7 @@ By the end of this lab, you will be able to:
 
      ![](./media/image29.png)
 
-1. Click **Upload** to upload the **NYCTripSmall.parquet** file uploaded successfully.
+1. Click **Upload** to upload the **NYCTripSmall.parquet** file uploaded successfully.
 
      ![](./media/image30.png)
 
@@ -201,7 +201,7 @@ By the end of this lab, you will be able to:
 
      ![](./media/image45.png)
 
-1. On the **Source** tab, select **+** **New**.
+1. On the **Source** tab, select **+** **New**.
 
      ![](./media/image47.png)
 
@@ -333,7 +333,7 @@ By the end of this lab, you will be able to:
 
     - **Password:** <inject key="AzureAdUserPassword"></inject>    
 
-1. On the **Fabric Home** page click on **+ New Workspaces** as shown in the image below.
+1. On the **Fabric Home** page click on **+ New Workspaces** as shown in the image below.
 
      ![](./media/image76.png)
 
@@ -386,16 +386,16 @@ By the end of this lab, you will be able to:
 
 ## Task 6: Copy metadata
 
-1. In your Fabric workspace, select the **Migrate** button on the item
+1. In your Fabric workspace, select the **Migrate** button on the item
     action deck.
 
      ![](./media/image80.png)
 
-1. In the **Migrate to Fabric** source menu, under **Migrate to a warehouse**, select the **Azure Synapse Analytics dedicated SQL pool** tile.
+1. In the **Migrate to Fabric** source menu, under **Migrate to a warehouse**, select the **Azure Synapse Analytics dedicated SQL pool** tile.
 
      ![](./media/image81.png)
 
-1. Select **Next**.
+1. Select **Next**.
 
     > **Note:** You may see the **Choose your method** screen select the default option **Upload a file with the source metadata (1)**, then click **Next (2)**.
 
@@ -409,7 +409,7 @@ By the end of this lab, you will be able to:
 
      ![](./media/image84.png)
 
-1. When the upload is complete, select **Next**.
+1. When the upload is complete, select **Next**.
 
      ![](./media/image85.png)
 
@@ -417,12 +417,12 @@ By the end of this lab, you will be able to:
 
      ![](./media/image86.png)
 
-1. Review your inputs and select **Migrate**. A new warehouse item is
+1. Review your inputs and select **Migrate**. A new warehouse item is
     created and the metadata migration begins.
 
      ![](./media/image87.png)
 
-    > **Note:** When using the Migration Assistant, the new warehouse has **case insensitive collation**, regardless of the [**default warehouse collation setting**](https://learn.microsoft.com/en-us/fabric/data-warehouse/collation).
+    > **Note:** When using the Migration Assistant, the new warehouse has **case insensitive collation**, regardless of the [**default warehouse collation setting**](https://learn.microsoft.com/en-us/fabric/data-warehouse/collation).
 
      ![](./media/image88.png)
 
@@ -436,7 +436,7 @@ By the end of this lab, you will be able to:
 
      ![](./media/new9.png)
 
-1. Select **Show migrated objects** to expand the section and see a
+1. Select **Show migrated objects** to expand the section and see a
     list of objects that have been successfully migrated to your Fabric
     warehouse.
 
@@ -456,7 +456,7 @@ By the end of this lab, you will be able to:
 
      ![](./media/image94.png)
 
-1. Optionally, select the **Export (1)**, then select **Downlaod as Excel file (2)** from the menu to download a migration summary as an Excel file.
+1. Optionally, select the **Export (1)**, then select **Downlaod as Excel file (2)** from the menu to download a migration summary as an Excel file.
 
     - The downloaded Excel file is a well-structured workbook containing two worksheets: **Migrated Objects** and **Objects To Fix**. It is MIP-compliant and adheres to your organization’s sensitivity labeling policies.
     - The CSV is lightweight and tool-friendly.
@@ -477,7 +477,7 @@ By the end of this lab, you will be able to:
 
 ## Task 7: Fix problems using Migration Assistant
 
-1. Select the **Fix problems** step in the Migration Assistant to see the scripts that failed to migrate.
+1. Select the **Fix problems** step in the Migration Assistant to see the scripts that failed to migrate.
 
      ![](./media/image98.png)
 
@@ -493,7 +493,7 @@ By the end of this lab, you will be able to:
 
     > **Note:** If **Step 4** does not complete successfully, you may need to run it again. Since this step is AI-assisted, occasional inconsistencies can occur. Simply repeat step 4 until it executes correctly.
 
-1. Select **Run** to validate and create the object.
+1. Select **Run** to validate and create the object.
 
      ![](./media/image102.png)
 

@@ -56,7 +56,7 @@ By the end of this lab, you will be able to:
 1. Verify that the following resources have deployed successfully:
 
     - Data Factory
-    
+
     - Storage account
 
         ![](./media/image8.png)
@@ -71,7 +71,7 @@ By the end of this lab, you will be able to:
 
      ![](./media/image11.png)
 
-1. In Azure Data Factory Studio, select the **Author** from the left navigation pane.
+1. In Azure Data Factory Studio, select the **Author** from the left navigation pane.
 
      ![](./media/image13.png)
 
@@ -87,7 +87,7 @@ By the end of this lab, you will be able to:
 
      ![](./media/image16.png)
 
-1. In the source dataset, select **Open** to view the input file
+1. In the source dataset, select **Open** to view the input file
 created for the demo.
 
      ![](./media/image17.png)
@@ -140,7 +140,7 @@ created for the demo.
 
      - **Password:** <inject key="AzureAdUserPassword"></inject>    
 
-1. On the **Fabric Home** page click on **+ New Workspaces** as shown in the image below.
+1. On the **Fabric Home** page click on **+ New Workspaces** as shown in the image below.
 
      ![](../Lab1/media/image76.png)
 
@@ -214,7 +214,7 @@ created for the demo.
 
 ## Task 7: Bring your Azure Data Factory to Fabric
 
-1. In Data Factory Studio, navigate to the **Manage** hub.
+1. In Data Factory Studio, navigate to the **Manage** hub.
 
      ![](./media/image42.png)
 

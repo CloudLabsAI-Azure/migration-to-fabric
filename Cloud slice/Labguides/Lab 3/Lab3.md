@@ -22,7 +22,7 @@ By the end of this lab, you will be able to:
 
 ## Task 1: Create a Synapse workspace in the Azure portal
 
-1. In the Azure portal search bar, search for **Synapse Analytics (1)** and select **Azure Synapse Analytics (2).** 
+1. In the Azure portal search bar, search for **Synapse Analytics (1)** and select **Azure Synapse Analytics (2).** 
 
      ![](../Lab1/media/image5.png)   
 
@@ -30,15 +30,15 @@ By the end of this lab, you will be able to:
 
      ![](../Lab1/media/image6.png)
 
-1. Enter below details to create resource group and then click on **OK**.
+1. Enter below details to create resource group and then click on **OK**.
 
-    - **Subscription**: Select the default subscription **(1)**
+    - **Subscription**: Select the default subscription **(1)**
 
     - **Resource Group**: Select the **fabric-rg (1)** Resource group
 
-    - **Workspace name**: Enter **fabric-synapse<inject key="DeploymentID" enableCopy="false"/> (3)**
+    - **Workspace name**: Enter **fabric-synapse<inject key="DeploymentID" enableCopy="false"/> (3)**
 
-    - **Region**: <inject key="Region" enableCopy="false"/> **(4)**
+    - **Region**: <inject key="Region" enableCopy="false"/> **(4)**
 
         ![](../Lab1/media/image7.png)
 
@@ -48,7 +48,7 @@ By the end of this lab, you will be able to:
 
     - **New:** **fabricsynapsegen2<inject key="DeploymentID" enableCopy="false"/> (1)**
 
-    - Click **OK (2)**
+    - Click **OK (2)**
 
         ![](../Lab1/media/image8.png)
 
@@ -56,9 +56,9 @@ By the end of this lab, you will be able to:
 
     - New: **synapsefile<inject key="DeploymentID" enableCopy="false"/> (2)**
 
-    - Click **OK (3)**.
+    - Click **OK (3)**.
 
-    - Now, click on **Next: Security > (4)**.
+    - Now, click on **Next: Security > (4)**.
 
         ![](../Lab1/media/image9.png)
 
@@ -80,11 +80,11 @@ By the end of this lab, you will be able to:
 
      ![](../Lab1/media/image13.png)
 
-1. Click on **Go to resource group** button.
+1. Click on **Go to resource group** button.
 
      ![](../Lab1/media/image14.png)
 
-1. Click on your **fabric-synapse<inject key="DeploymentID" enableCopy="false"/>** workspace from the list.
+1. Click on your **fabric-synapse<inject key="DeploymentID" enableCopy="false"/>** workspace from the list.
 
      ![](../Lab1/media/image15.png) 
 
@@ -106,7 +106,7 @@ By the end of this lab, you will be able to:
 
      ![](../Lab1/media/image17.png)
 
-1. Select **SQL pools (1)** under **Analytics pools** and then click on **+ New (2)** to create a new SQL pool.
+1. Select **SQL pools (1)** under **Analytics pools** and then click on **+ New (2)** to create a new SQL pool.
 
      ![](../Lab1/media/new0.png)
 
@@ -152,7 +152,7 @@ By the end of this lab, you will be able to:
 
      ![](../Lab1/media/image25.png)
 
-1. Select the container named **synapsefile<inject key="DeploymentID" enableCopy="false"/> (Primary)**.
+1. Select the container named **synapsefile<inject key="DeploymentID" enableCopy="false"/> (Primary)**.
 
      ![](../Lab1/media/image26.png)
 
@@ -176,7 +176,7 @@ By the end of this lab, you will be able to:
 
      ![](./media/image30.png)
 
-1. Browse to **C:\LabFiles\lab file (1)** path, then, select **all (2)** file except DACPAC file and click on **Open (3)** button.
+1. Browse to **C:\LabFiles\lab file (1)** path, then, select **all (2)** file except DACPAC file and click on **Open (3)** button.
 
      ![](./media/image31.png)
 
@@ -222,7 +222,7 @@ By the end of this lab, you will be able to:
 
      - **Password:** <inject key="AzureAdUserPassword"></inject>    
 
-1. On the **Fabric Home** page click on **+ New Workspaces** as shown in the image below.
+1. On the **Fabric Home** page click on **+ New Workspaces** as shown in the image below.
 
     ![](../Lab1/media/image76.png)
 
@@ -373,19 +373,19 @@ By the end of this lab, you will be able to:
 
      ![](./media/image61.png)
 
-1. On newly created pipeline, select **Copy data (1)** dropdown and choose **Add copy data activity (2)** option.
+1. On newly created pipeline, select **Copy data (1)** dropdown and choose **Add copy data activity (2)** option.
 
      ![](./media/image62.png)
 
-1. With the **copy data** being selected, navigate to **Source** tab.
+1. With the **copy data** being selected, navigate to **Source** tab.
 
      ![](./media/image63.png)
 
-1. Select the **Connection** dropdown **(1)** and select **Browse all (2)** option.
+1. Select the **Connection** dropdown **(1)** and select **Browse all (2)** option.
 
      ![](./media/image64.png)
 
-1. Select **+ New** from the left pane.
+1. Select **+ New** from the left pane.
 
      ![](./media/image65.png)
 
