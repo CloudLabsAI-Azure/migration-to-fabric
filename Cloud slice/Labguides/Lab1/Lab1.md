@@ -113,7 +113,7 @@ By the end of this lab, you will be able to:
 
 1. On the **fabric-synapse<inject key="DeploymentID" enableCopy="false"/>** workspace Overview page, click click **Open** in the **Open Synapse Studio** dialog to launch Azure Synapse Studio.
 
-     ![](./media/image16.png)
+    ![](./media/image16.png)
 
 1. In Synapse Studio, select **Manage** from the left navigation pane.
 
