@@ -94,7 +94,7 @@ By the end of this lab, you will be able to:
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="875974db-278a-4941-80d9-42f215abd3e2" />       
+<validation step="c1d778f6-2e99-4a3c-b246-06537302d31c" />       
 
 ## Task 2: Create a dedicated SQL pool
 
@@ -140,7 +140,7 @@ By the end of this lab, you will be able to:
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="e3fdb79a-98cb-4e59-83c9-63793a1bb5fc" />       
+<validation step="489fd00e-068a-44e4-a1f4-bde64ed02795" />       
 
 ## Task 3: Upload Sample Data into the Primary Storage Account
 
@@ -196,7 +196,7 @@ By the end of this lab, you will be able to:
 
      ![](./media/image34.png)
 
-1. Copy the **URL** path and save it in notepad to use it for later use
+1. Copy the **URL** path and save it in notepad to use it for later use.
 
      ![](./media/image35.png)
 
@@ -269,7 +269,7 @@ By the end of this lab, you will be able to:
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="e3fdb79a-98cb-4e59-83c9-63793a1bb5fc" />  
+<validation step="816628f0-c104-4a40-ae80-e93914f85b5d" />  
 
 ## Task 5: Create a Lakehouse
 
@@ -293,7 +293,7 @@ By the end of this lab, you will be able to:
 
 ## Task 6: Create Shortcut in the Files Section
 
-1. In the **Lakehouse**, select the **New Shortcut** tile
+1. In the **Lakehouse**, select the **New Shortcut** tile.
 
      ![](./media/image46.png)
 
@@ -309,7 +309,7 @@ By the end of this lab, you will be able to:
 
      ![](./media/new12.png)
 
-1. Click **Create**
+1. Click **Create.**
 
      ![](./media/image50.png)
 
@@ -336,7 +336,7 @@ By the end of this lab, you will be able to:
      ![](./media/image54.png)
 
 1. Click the **+ Code** icon below the cell output to add a new code cell, enter the following code, and click **▷ Run cell**.
-
+    
     ```python
     df.write.format("delta").mode("overwrite").save("Tables/Customer")
     ```
@@ -355,7 +355,7 @@ By the end of this lab, you will be able to:
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="e3fdb79a-98cb-4e59-83c9-63793a1bb5fc" />  
+<validation step="d7f320f0-b962-4df4-8192-dd9e354ddbf6" />  
 
 ## Task 7: Rebuild Synapse Pipelines in Microsoft Fabric
 
