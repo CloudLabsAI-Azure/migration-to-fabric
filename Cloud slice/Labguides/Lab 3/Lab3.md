@@ -397,9 +397,9 @@ By the end of this lab, you will be able to:
 
     ![](./media/image67.png)
 
-    > **Note:** To get the URL, navigate to **Synapse workspace Overview (1)** page, copy **Primary ADLS Gen2 account URL (2)**.
+     > **Note:** To get the URL, navigate to **Synapse workspace Overview (1)** page, copy **Primary ADLS Gen2 account URL (2)**.
     
-    ![](./media/new13.png)
+     ![](./media/new13.png)
 
 1. In the **Source** tab of the Copy Data activity, click the **Browse** button to select the folder containing the source files.
 
@@ -439,7 +439,7 @@ By the end of this lab, you will be able to:
 
     ![](./media/image77.png)
 
-1. After the pipeline completion is successful. Open the ***FabricMigrationLab<inject key="DeploymentID" enableCopy="false"/> (1)** workspace and select the **SynapseMigrationLakehouse (2)** to access and work with the created Lakehouse.
+1. After the pipeline completion is successful. Open the **FabricMigrationLab<inject key="DeploymentID" enableCopy="false"/> (1)** workspace and select the **SynapseMigrationLakehouse (2)** to access and work with the created Lakehouse.
 
     ![](./media/image78.png)
 
@@ -449,7 +449,6 @@ By the end of this lab, you will be able to:
 
 ## Review
 
-In this lab, you successfully migrated data and basic pipeline
-functionality from Azure Synapse Analytics to Microsoft Fabric. You created and configured necessary resources in both platforms, accessed and transformed data using Lakehouse and notebooks, and rebuilt pipelines to enable data movement within Fabric.
+In this lab, you successfully migrated data and basic pipeline functionality from Azure Synapse Analytics to Microsoft Fabric. You created and configured necessary resources in both platforms, accessed and transformed data using Lakehouse and notebooks, and rebuilt pipelines to enable data movement within Fabric.
 
 This lab demonstrates how Microsoft Fabric simplifies data integration and analytics by providing a unified platform, making it easier to modernize existing Synapse-based solutions.

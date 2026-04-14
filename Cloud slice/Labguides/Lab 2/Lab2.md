@@ -4,12 +4,7 @@
 
 ## Overview
 
-This lab focuses on migrating SQL objects and data from **Azure Synapse
-Analytics (Dedicated SQL Pool)** to **Microsoft Fabric Data Warehouse**.
-It demonstrates how to create a warehouse in Fabric, establish a
-connection to Synapse, and use pipelines to copy data into OneLake. The
-lab also covers validating migrated data and scheduling pipelines for
-automated data movement.
+This lab focuses on migrating SQL objects and data from **Azure Synapse Analytics (Dedicated SQL Pool)** to **Microsoft Fabric Data Warehouse**. It demonstrates how to create a warehouse in Fabric, establish a connection to Synapse, and use pipelines to copy data into OneLake. The lab also covers validating migrated data and scheduling pipelines for automated data movement.
 
 ## Objectives
 
@@ -41,7 +36,13 @@ By the end of this lab, you will be able to:
 
     ![](./media/image3.png)
 
-     > **Congratulations** on completing the task! Now, navigate to the Lab Validation tab and click Validate.     
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task.
+> - If you receive a success message, you can proceed to the next task.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="1ee57940-621b-4154-aeb5-75fd27b16bd0" />    
 
 ## Task 2: Create Linked Connection to Synapse SQL
 
@@ -57,8 +58,7 @@ By the end of this lab, you will be able to:
 
     ![](./media/new2.png)
 
-1. On newly created pipeline, select **Copy data (1)** dropdown and
-    choose **Add copy data activity (2)** option.
+1. On newly created pipeline, select **Copy data (1)** dropdown and choose **Add copy data activity (2)** option.
 
     ![](./media/image7.png)
 
@@ -74,22 +74,22 @@ By the end of this lab, you will be able to:
 
     ![](./media/image10.png)
 
-1. From the data source options, select **Azure Synapse Analytics (SQL
-    DW)** to begin the connection setup.
+1. From the data source options, select **Azure Synapse Analytics (SQL DW)** to begin the connection setup.
 
     ![](./media/image11.png)
 
 1. Select **New Connection → Azure Synapse Analytics (SQL)** and enter the following details, then click **Connect (6)**:
 
-    | Field    | Value   |
-    |----------|---------|
-    | Server   | Enter Dedicated SQL Endpoint that you pasted into the Notepad in **Task 2 → Step 7** **(1)**   |
-    | Database | **sql dedicated pool (2)** |
-    | Authentication | **Basic (3)**      |
-    | Username | `sqladmin`  **(4)**         |
-    | Password | `password321!`  **(5)**     |
 
-    ![](./media/new4.png)
+    | Field    | Value                                              |
+    |----------|----------------------------------------------------|
+    | Server   | Enter Dedicated SQL Endpoint that you pasted into the Notepad in **Task 2 → Step 7** **(1)**   |
+    | Database | **sql dedicated pool (2)**                  |
+    | Authentication | **Basic (3)**      |
+    | Username | `sqladmin`  **(4)**                                        |
+    | Password | `password321!`  **(5)**                                     |
+
+     ![](./media/new4.png)
 
 1. Under Source tab, open the **Table** dropdown and select the **fabric_employee** table.
 
@@ -105,8 +105,7 @@ By the end of this lab, you will be able to:
 
     ![](./media/image16.png)
 
-1. On choose a destination window, select **OneLake catalog** from the
-    left pane and select the **sqlpoolmigrate**.
+1. On choose a destination window, select **OneLake catalog** from the left pane and select the **sqlpoolmigrate**.
 
     ![](./media/image17.png)
 
@@ -129,9 +128,7 @@ By the end of this lab, you will be able to:
 
     ![](./media/image23.png)
 
-1. After the successful execution of the pipeline, go to your SQL
-    analytics endpoint Lakehouse and open the explorer to see the
-    imported data.
+1. After the successful execution of the pipeline, go to your SQL analytics endpoint Lakehouse and open the explorer to see the imported data.
 
 1. Select **Fabric_Migration<inject key="DeploymentID" enableCopy="false"/> workspace (1)** from the left navigation, and select **sqlpoolmigrate (2)** to view and access the created warehouse.
 
@@ -180,7 +177,13 @@ By the end of this lab, you will be able to:
 
     > **Note:** we had renamed *dbo.fabric_employee* to *dbo.employee* for migration
 
-     > **Congratulations** on completing the task! Now, navigate to the Lab Validation tab and click Validate.    
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task.
+> - If you receive a success message, you can proceed to the next task.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="01133add-9237-42c6-b39e-0dd25c717758" />    
 
 ## Task 3: Schedule the Pipeline
 
