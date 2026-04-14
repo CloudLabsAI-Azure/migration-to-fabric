@@ -212,19 +212,19 @@ By the end of this lab, you will be able to:
 
 1. Open your browser and navigate to the following URL to open **Microsoft Fabric** portal: 
 
-    ```
-    https://app.fabric.microsoft.com/
-    ```
+     ```
+     https://app.fabric.microsoft.com/
+     ```
 
 1. Enter the following credentials to login to the Fabric portal:  
 
-    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+     - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
-    - **Password:** <inject key="AzureAdUserPassword"></inject>    
+     - **Password:** <inject key="AzureAdUserPassword"></inject>    
 
 1. On the **Fabric Home** page click on **+ New Workspaces** as shown in the image below.
 
-     ![](../Lab1/media/image76.png)
+    ![](../Lab1/media/image76.png)
 
 1. On the **Create a workspace** pane that appears to the right, enter the following details, and then click **Apply (4)**.
 
@@ -273,7 +273,7 @@ By the end of this lab, you will be able to:
 
 ## Task 5: Create a Lakehouse
 
-1. Go to **Workspaces (1)** from the left navigation and select the ***FabricMigrationLab<inject key="DeploymentID" enableCopy="false"/> (2)** workspace to open and access its resources.
+1. Go to **Workspaces (1)** from the left navigation and select the **FabricMigrationLab<inject key="DeploymentID" enableCopy="false"/> (2)** workspace to open and access its resources.
 
      ![](./media/new10.png)
 
@@ -445,7 +445,7 @@ By the end of this lab, you will be able to:
 
 1. Expand **Tables (1)** in the Lakehouse and verify the **dim_Date (1)** table is loaded.
 
-     ![](./media/image79.png)
+     ![](./media/new17.png)
 
 ## Review
 
