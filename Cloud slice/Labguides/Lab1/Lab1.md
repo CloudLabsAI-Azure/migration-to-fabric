@@ -392,7 +392,7 @@ By the end of this lab, you will be able to:
 
     > **Note:** You may see the **Choose your method** screen select the default option **Upload a file with the source metadata (1)**, then click **Next (2)**.
 
-       ![](./media/image82.png)
+     ![](./media/image82.png)
 
 1. Click **Choose file**
 
