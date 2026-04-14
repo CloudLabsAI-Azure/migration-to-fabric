@@ -44,7 +44,8 @@ In this task, you will create a new warehouse in Microsoft Fabric to store migra
     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
     > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-    <validation step="1ee57940-621b-4154-aeb5-75fd27b16bd0" />    
+    <validation step="1ee57940-621b-4154-aeb5-75fd27b16bd0" />   
+     
 
 ## Task 2: Create Linked Connection to Synapse SQL
 
@@ -187,6 +188,7 @@ In this task, you will create a new warehouse in Microsoft Fabric to store migra
     > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
     <validation step="01133add-9237-42c6-b39e-0dd25c717758" />    
+
 
 ## Task 3: Schedule the Pipeline
 
