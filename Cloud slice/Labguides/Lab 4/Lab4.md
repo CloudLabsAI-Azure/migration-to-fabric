@@ -56,6 +56,7 @@ By the end of this lab, you will be able to:
 1. Verify that the following resources have deployed successfully:
 
     - Data Factory
+    
     - Storage account
 
         ![](./media/image8.png)
@@ -177,7 +178,7 @@ created for the demo.
     https://sandboxailabs1013.onmicrosoft.com/cloudlabs.ai
     ```
 
-     ![](../Lab%203/media/new18.png)  
+    ![](../Lab%203/media/new18.png)  
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task.

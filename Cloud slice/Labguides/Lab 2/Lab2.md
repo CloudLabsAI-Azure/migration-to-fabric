@@ -80,7 +80,6 @@ By the end of this lab, you will be able to:
 
 1. Select **New Connection → Azure Synapse Analytics (SQL)** and enter the following details, then click **Connect (6)**:
 
-
     | Field    | Value                                              |
     |----------|----------------------------------------------------|
     | Server   | Enter Dedicated SQL Endpoint that you pasted into the Notepad in **Task 2 → Step 7** **(1)**   |

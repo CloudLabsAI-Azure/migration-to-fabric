@@ -234,9 +234,9 @@ By the end of this lab, you will be able to:
     | Advanced               | Select **Fabric (2)**                                                        |
     | Default storage format | **Small semantic model storage format (3)**                                           |
 
-     ![](./media/new3.png)
+    ![](./media/new3.png)
 
-     ![](./media/new4.png)
+    ![](./media/new4.png)
 
 1. The Workspace is now created.
 
@@ -261,7 +261,7 @@ By the end of this lab, you will be able to:
     https://sandboxailabs1013.onmicrosoft.com/cloudlabs.ai
     ```
 
-     ![](./media/new9.png)  
+    ![](./media/new9.png)  
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task.
@@ -333,7 +333,7 @@ By the end of this lab, you will be able to:
     df = spark.read.format("csv").load("abfss://synapsefile<inject key="DeploymentID" enableCopy="false"/>@fabricsynapsegen2<inject key="DeploymentID" enableCopy="false"/>.dfs.core.windows.net/FabricMigration/DimCustomer.csv")
     ```
 
-     ![](./media/image54.png)
+    ![](./media/image54.png)
 
 1. Click the **+ Code** icon below the cell output to add a new code cell, enter the following code, and click **▷ Run cell**.
     
@@ -341,7 +341,7 @@ By the end of this lab, you will be able to:
     df.write.format("delta").mode("overwrite").save("Tables/Customer")
     ```
 
-     ![](./media/image55.png)
+    ![](./media/image55.png)
 
 1. To validate the created tables, refresh the **Tables (1)** section in the **Explorer (2)** panel until all tables appear.
 
@@ -397,9 +397,9 @@ By the end of this lab, you will be able to:
 
      ![](./media/image67.png)
 
-      > **Note:** To get the URL, navigate to **Synapse workspace Overview (1)** page, copy **Primary ADLS Gen2 account URL (2)**.
+     > **Note:** To get the URL, navigate to **Synapse workspace Overview (1)** page, copy **Primary ADLS Gen2 account URL (2)**.
     
-      ![](./media/new13.png)
+     ![](./media/new13.png)
 
 1. In the **Source** tab of the Copy Data activity, click the **Browse** button to select the folder containing the source files.
 
