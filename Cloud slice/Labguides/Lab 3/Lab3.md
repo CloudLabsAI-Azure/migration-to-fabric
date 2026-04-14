@@ -86,7 +86,15 @@ By the end of this lab, you will be able to:
 
 1. Click on your **fabric-synapse<inject key="DeploymentID" enableCopy="false"/>** workspace from the list.
 
-    ![](../Lab1/media/image15.png)   
+    ![](../Lab1/media/image15.png) 
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task.
+> - If you receive a success message, you can proceed to the next task.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="875974db-278a-4941-80d9-42f215abd3e2" />       
 
 ## Task 2: Create a dedicated SQL pool
 
@@ -125,6 +133,14 @@ By the end of this lab, you will be able to:
 1. Return to the **Azure portal**. In the **Overview** section of the Synapse workspace, copy the **Dedicated SQL endpoint** and **Dedicated SQL pool** details, and save them in a Notepad for later use.
 
      ![](../Lab1/media/image23.png)
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task.
+> - If you receive a success message, you can proceed to the next task.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="e3fdb79a-98cb-4e59-83c9-63793a1bb5fc" />       
 
 ## Task 3: Upload Sample Data into the Primary Storage Account
 
@@ -247,6 +263,14 @@ By the end of this lab, you will be able to:
 
      ![](./media/new9.png)  
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task.
+> - If you receive a success message, you can proceed to the next task.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="e3fdb79a-98cb-4e59-83c9-63793a1bb5fc" />  
+
 ## Task 5: Create a Lakehouse
 
 1. Go to **Workspaces (1)** from the left navigation and select the ***FabricMigrationLab<inject key="DeploymentID" enableCopy="false"/> (2)** workspace to open and access its resources.
@@ -324,6 +348,14 @@ By the end of this lab, you will be able to:
     ![](./media/image56.png)
 
     ![](./media/image57.png)
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task.
+> - If you receive a success message, you can proceed to the next task.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="e3fdb79a-98cb-4e59-83c9-63793a1bb5fc" />  
 
 ## Task 7: Rebuild Synapse Pipelines in Microsoft Fabric
 

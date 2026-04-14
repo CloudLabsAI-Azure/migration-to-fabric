@@ -137,7 +137,13 @@ By the end of this lab, you will be able to:
 
      ![](./media/image23.png)
 
-     > **Congratulations** on completing the task! Now, navigate to the Lab Validation tab and click Validate.     
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task.
+> - If you receive a success message, you can proceed to the next task.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="8004f3de-9884-4a7f-9217-913b84b70092" />    
 
 ## Task 3: Place sample data into the primary storage account
 
@@ -370,7 +376,13 @@ By the end of this lab, you will be able to:
 
      ![](./media/new10.png)      
 
-     > **Congratulations** on completing the task! Now, navigate to the Lab Validation tab and click Validate.    
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task.
+> - If you receive a success message, you can proceed to the next task.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="875974db-278a-4941-80d9-42f215abd3e2" />    
 
 ## Task 6: Copy metadata
 
@@ -455,7 +467,13 @@ By the end of this lab, you will be able to:
 
      ![](./media/image96.png)
 
-     > **Congratulations** on completing the task! Now, navigate to the Lab Validation tab and click Validate.     
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task.
+> - If you receive a success message, you can proceed to the next task.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="8c6aea1d-fccd-484f-af63-01504c3d9ab5" />    
 
 ## Task 7: Fix problems using Migration Assistant
 
@@ -560,6 +578,7 @@ warehouse.
      ![](./media/image117.png)
 
 1. Enter the following code **(1)** into the editor and click **Run (2)** to execute it. This query is used to identify which applications, users, and IP addresses are connecting to an Azure Synapse Dedicated SQL Pool for monitoring and auditing purposes.
+
 
     ```
     SELECT DISTINCT CASE 
