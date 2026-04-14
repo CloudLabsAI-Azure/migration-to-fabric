@@ -38,13 +38,13 @@ In this task, you will create a new warehouse in Microsoft Fabric to store migra
 
     ![](./media/image3.png)
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task.
-> - If you receive a success message, you can proceed to the next task.
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Hit the Validate button for the corresponding task.
+    > - If you receive a success message, you can proceed to the next task.
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="1ee57940-621b-4154-aeb5-75fd27b16bd0" />    
+    <validation step="1ee57940-621b-4154-aeb5-75fd27b16bd0" />    
 
 ## Task 2: Create Linked Connection to Synapse SQL
 
@@ -180,13 +180,13 @@ In this task, you will create a new warehouse in Microsoft Fabric to store migra
 
     > **Note:** we had renamed *dbo.fabric_employee* to *dbo.employee* for migration
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task.
-> - If you receive a success message, you can proceed to the next task.
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Hit the Validate button for the corresponding task.
+    > - If you receive a success message, you can proceed to the next task.
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="01133add-9237-42c6-b39e-0dd25c717758" />    
+    <validation step="01133add-9237-42c6-b39e-0dd25c717758" />    
 
 ## Task 3: Schedule the Pipeline
 
