@@ -102,12 +102,12 @@ By the end of this lab, you will be able to:
 
     ![](./media/image15.png)
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task.
-> - If you receive a success message, you can proceed to the next task.
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-<validation step="e3fdb79a-98cb-4e59-83c9-63793a1bb5fc" />    
+     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+     > - Hit the Validate button for the corresponding task.
+     > - If you receive a success message, you can proceed to the next task.
+     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+     > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+     <validation step="e3fdb79a-98cb-4e59-83c9-63793a1bb5fc" />    
 
 ## Task 2: Create a dedicated SQL pool
 
