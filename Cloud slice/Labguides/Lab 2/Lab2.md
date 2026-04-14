@@ -90,7 +90,7 @@ By the end of this lab, you will be able to:
     | Username | `sqladmin`  **(4)**                                        |
     | Password | `password321!`  **(5)**                                     |
 
-      ![](./media/new4.png)
+    ![](./media/new4.png)
 
 1. Under Source tab, open the **Table** dropdown and select the **fabric_employee** table.
 
