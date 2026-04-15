@@ -120,12 +120,12 @@ By the end of this lab, you will be able to:
 
      ![](../Lab1/media/image23.png)
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+     > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+     > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="489fd00e-068a-44e4-a1f4-bde64ed02795" />       
+     <validation step="489fd00e-068a-44e4-a1f4-bde64ed02795" />       
 
 ## Task 3: Upload Sample Data into the Primary Storage Account
 
