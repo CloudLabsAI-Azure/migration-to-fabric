@@ -99,18 +99,13 @@ By the end of this lab, you will be able to:
      - If successful, proceed to the next task.
      - If not, retry using the lab guide.
      - Need help? cloudlabs-support@spektrasystems.com
-     
-     <br><br>
-     
      <validation step="e3fdb79a-98cb-4e59-83c9-63793a1bb5fc" />
-     
-     <br><br>
-     
+        
 ## Task 2: Create a dedicated SQL pool
 
 1. On the **fabric-synapse<inject key="DeploymentID" enableCopy="false"/>** workspace Overview page, click **Open** in the **Open Synapse Studio** dialog to launch Azure Synapse Studio.
 
-   ![](./media/image16.png)
+     ![](./media/image16.png)
 
 1. In Synapse Studio, select **Manage** from the left navigation pane.
 
@@ -156,7 +151,7 @@ By the end of this lab, you will be able to:
 
 1. Navigate to **Synapse Studio**, then open the **Data (1)** from the left navigation pane and select the **Linked (2)** section.
  
-     ![](./media/image24.png)
+    ![](./media/image24.png)
 
 1. Under the **Linked** tab in the Data pane and expand **Azure Data Lake Storage Gen2** to locate and expand your workspace name, such as **fabric-synapse<inject key="DeploymentID" enableCopy="false"/> (Primary — asastorageaccount01 (your storage account))** to view the container.
 
