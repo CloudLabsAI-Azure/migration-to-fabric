@@ -365,7 +365,6 @@ By the end of this lab, you will be able to:
 
 1. In the Add people pane, enter below **URL (1)** in the search box, then select the **Admin (3)** role from the dropdown next to **Viewer (2)** role, and click **Add (4)** to assign permissions.
  
-
     ```
     https://sandboxailabs1012.onmicrosoft.com/cloudlabs.ai
     ```
@@ -376,9 +375,9 @@ By the end of this lab, you will be able to:
     https://sandboxailabs1013.onmicrosoft.com/cloudlabs.ai
     ```
 
-     ![](./media/new8.png)  
+      ![](./media/new8.png)  
 
-     ![](./media/new10.png)      
+      ![](./media/new10.png)      
 
 ## Task 6: Copy metadata
 
@@ -478,31 +477,31 @@ By the end of this lab, you will be able to:
 
 1. Select the **Fix problems** step in the Migration Assistant to see the scripts that failed to migrate.
 
-     ![](./media/image98.png)
+      ![](./media/image98.png)
 
 1. Review the comments at the beginning of the script to understand the adjustments that were made.
 
-     ![](./media/image100.png)
+      ![](./media/image100.png)
 
 1. Review and fix the broken scripts using the error information and documentation.
 
 1. Click **Run (1)** to execute the script, and if any issues are detected, select **Fix query errors (2)** in the **Suggested action** section, then click on **Accept** to keep the changes suggested by Copilot will update the script with recommended changes. Since it is AI-driven, review the suggestions carefully and make any necessary adjustments.
 
-     ![](./media/new11.png)
+      ![](./media/new11.png)
 
     > **Note:** If **Step 4** does not complete successfully, you may need to run it again. Since this step is AI-assisted, occasional inconsistencies can occur. Simply repeat step 4 until it executes correctly.
 
 1. Select **Run** to validate and create the object.
 
-     ![](./media/image102.png)
+      ![](./media/image102.png)
 
 1. The script executes successfully.
 
-     ![](./media/image103.png)
+      ![](./media/image103.png)
 
 1. Continue to fix the rest of the scripts. You can choose to skip fixing scripts that you don't need during this step.
 
-     ![](./media/image104.png)
+      ![](./media/image104.png)
 
 1. Once all required metadata is ready for migration, click the **Back** button in the **Fix problems** pane to return to the top-level view of the Migration Assistant. Then, mark the **2. Fix problems** step as complete in the Migration Assistant.
 
