@@ -153,7 +153,7 @@ By the end of this lab, you will be able to:
 
 1. Navigate to **Synapse Studio**, then open the **Data (1)** from the left navigation pane and select the **Linked (2)** section.
  
-    ![](./media/image24.png)
+     ![](./media/image24.png)
 
 1. Under the **Linked** tab in the Data pane and expand **Azure Data Lake Storage Gen2** to locate and expand your workspace name, such as **fabric-synapse<inject key="DeploymentID" enableCopy="false"/> (Primary — asastorageaccount01 (your storage account))** to view the container.
 
