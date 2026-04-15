@@ -77,14 +77,10 @@ By the end of this lab, you will be able to:
 
    ![](../Lab1/media/image15.png) 
 
-### Congratulations!
-
-You’ve completed the task. Now let’s validate it:
-
-- Hit the **Validate** button for the corresponding task.
-- If successful, proceed to the next task.
-- If not, retry using the lab guide.
-- Need help? cloudlabs-support@spektrasystems.com
+>**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
 
 <validation step="c1d778f6-2e99-4a3c-b246-06537302d31c" />     
 
@@ -124,14 +120,10 @@ You’ve completed the task. Now let’s validate it:
 
    ![](../Lab1/media/image23.png)
 
-### Congratulations!
-
-You’ve completed the task. Now let’s validate it:
-
-- Hit the **Validate** button for the corresponding task.
-- If successful, proceed to the next task.
-- If not, retry using the lab guide.
-- Need help? cloudlabs-support@spektrasystems.com
+>**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
 
 <validation step="489fd00e-068a-44e4-a1f4-bde64ed02795" />       
 
@@ -255,14 +247,10 @@ You’ve completed the task. Now let’s validate it:
 
    ![](./media/new9.png)  
 
-### Congratulations!
-
-You’ve completed the task. Now let’s validate it:
-
-- Hit the **Validate** button for the corresponding task.
-- If successful, proceed to the next task.
-- If not, retry using the lab guide.
-- Need help? cloudlabs-support@spektrasystems.com
+>**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
 
 <validation step="816628f0-c104-4a40-ae80-e93914f85b5d" />
 
@@ -344,14 +332,10 @@ You’ve completed the task. Now let’s validate it:
 
    ![](./media/image57.png)
 
-### Congratulations!
-
-You’ve completed the task. Now let’s validate it:
-
-- Hit the **Validate** button for the corresponding task.
-- If successful, proceed to the next task.
-- If not, retry using the lab guide.
-- Need help? cloudlabs-support@spektrasystems.com
+>**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
 
 <validation step="d7f320f0-b962-4df4-8192-dd9e354ddbf6" />  
 
