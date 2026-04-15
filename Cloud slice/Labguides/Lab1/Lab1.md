@@ -388,7 +388,7 @@ By the end of this lab, you will be able to:
      - If successful, proceed to the next task.
      - If not, retry using the lab guide.
      - Need help? cloudlabs-support@spektrasystems.com
-     <validation step="875974db-278a-4941-80d9-42f215abd3e2" />    
+     <validation step="875974db-278a-4941-80d9-42f215abd3e2" />
 
 ## Task 6: Copy metadata
 
