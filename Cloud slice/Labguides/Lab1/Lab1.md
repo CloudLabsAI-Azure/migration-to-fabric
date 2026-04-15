@@ -380,16 +380,6 @@ By the end of this lab, you will be able to:
 
      ![](./media/new10.png)      
 
-     ### Congratulations!
-
-     You’ve completed the task. Now let’s validate it:
-     
-     - Hit the **Validate** button for the corresponding task.
-     - If successful, proceed to the next task.
-     - If not, retry using the lab guide.
-     - Need help? cloudlabs-support@spektrasystems.com
-     <validation step="875974db-278a-4941-80d9-42f215abd3e2" />
-
 ## Task 6: Copy metadata
 
 1. In your Fabric workspace, select the **Migrate** button on the item
@@ -473,13 +463,16 @@ By the end of this lab, you will be able to:
 
      ![](./media/image96.png)
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task.
-> - If you receive a success message, you can proceed to the next task.
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+     ### Congratulations!
 
-<validation step="8c6aea1d-fccd-484f-af63-01504c3d9ab5" />    
+     You’ve completed the task. Now let’s validate it:
+     
+     - Hit the **Validate** button for the corresponding task.
+     - If successful, proceed to the next task.
+     - If not, retry using the lab guide.
+     - Need help? cloudlabs-support@spektrasystems.com
+     <validation step="875974db-278a-4941-80d9-42f215abd3e2" />
+     <validation step="8c6aea1d-fccd-484f-af63-01504c3d9ab5" />    
 
 ## Task 7: Fix problems using Migration Assistant
 
