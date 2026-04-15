@@ -147,7 +147,7 @@ By the end of this lab, you will be able to:
      - If successful, proceed to the next task.
      - If not, retry using the lab guide.
      - Need help? cloudlabs-support@spektrasystems.com
-     <validation step="8004f3de-9884-4a7f-9217-913b84b70092" />    
+     <validation step="8004f3de-9884-4a7f-9217-913b84b70092" />
 
 ## Task 3: Place sample data into the primary storage account
 
