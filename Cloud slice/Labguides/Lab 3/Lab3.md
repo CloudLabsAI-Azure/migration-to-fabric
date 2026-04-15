@@ -77,15 +77,15 @@ By the end of this lab, you will be able to:
 
      ![](../Lab1/media/image15.png) 
 
-     ### Congratulations!
+### Congratulations!
 
-     You’ve completed the task. Now let’s validate it:
-     
-     - Hit the **Validate** button for the corresponding task.
-     - If successful, proceed to the next task.
-     - If not, retry using the lab guide.
-     - Need help? cloudlabs-support@spektrasystems.com
-     <validation step="c1d778f6-2e99-4a3c-b246-06537302d31c" />     
+You’ve completed the task. Now let’s validate it:
+
+- Hit the **Validate** button for the corresponding task.
+- If successful, proceed to the next task.
+- If not, retry using the lab guide.
+- Need help? cloudlabs-support@spektrasystems.com
+<validation step="c1d778f6-2e99-4a3c-b246-06537302d31c" />     
 
 ## Task 2: Create a dedicated SQL pool
 
@@ -123,15 +123,15 @@ By the end of this lab, you will be able to:
 
      ![](../Lab1/media/image23.png)
 
-     ### Congratulations!
+### Congratulations!
 
-     You’ve completed the task. Now let’s validate it:
-     
-     - Hit the **Validate** button for the corresponding task.
-     - If successful, proceed to the next task.
-     - If not, retry using the lab guide.
-     - Need help? cloudlabs-support@spektrasystems.com
-     <validation step="489fd00e-068a-44e4-a1f4-bde64ed02795" />       
+You’ve completed the task. Now let’s validate it:
+
+- Hit the **Validate** button for the corresponding task.
+- If successful, proceed to the next task.
+- If not, retry using the lab guide.
+- Need help? cloudlabs-support@spektrasystems.com
+<validation step="489fd00e-068a-44e4-a1f4-bde64ed02795" />       
 
 ## Task 3: Upload Sample Data into the Primary Storage Account
 
@@ -219,8 +219,8 @@ By the end of this lab, you will be able to:
 
 1. On the **Create a workspace** pane that appears to the right, enter the following details, and then click **Apply (4)**.
 
-    | Field                   | Value                                                                 |
-    |------------------------|-----------------------------------------------------------------------|
+    | Field | Value |
+    |------------------------|------------------------------|
     | Name                   | **FabricMigrationLab<inject key="DeploymentID" enableCopy="false"/> (1)**  |
     | Advanced               | Select **Fabric (2)**                                                        |
     | Default storage format | **Small semantic model storage format (3)**                                           |
