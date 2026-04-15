@@ -36,41 +36,30 @@ By the end of this lab, you will be able to:
 1. Enter below details to create resource group and then click on **OK**.
 
     - **Subscription**: Select the default subscription **(1)**
-
     - **Resource Group**: Select the **fabric-rg (1)** Resource group
-
     - **Workspace name**: Enter **fabric-synapse<inject key="DeploymentID" enableCopy="false"/> (3)**
-
     - **Region**: <inject key="Region" enableCopy="false"/> **(4)**
 
         ![](./media/image7.png)
 
     - **Select Data Lake Storage Gen2 account:** From subscription
-
     - **Account name:** Create
-
     - **New:** **fabricsynapsegen2<inject key="DeploymentID" enableCopy="false"/> (1)**
-
     - Click **OK (2)**
 
         ![](./media/image8.png)
 
     - **File System Name**: **Create (1)**
-
     - New: **synapsefile<inject key="DeploymentID" enableCopy="false"/> (2)**
-
     - Click **OK (3)**.
-
     - Now, click on **Next: Security > (4)**.
 
         ![](./media/image9.png)
 
 1. Configure the **Security** settings by selecting **Use both local and Microsoft Entra ID** authentication as Authentication method:
-    
+
     - **SQL Server admin login:** `sqladmin` **(1)**
-
     - **SQL Password**: `password321!` **(2)**
-
     - Click **Review + create (3)**
 
       ![](./media/image11.png)
@@ -118,9 +107,7 @@ By the end of this lab, you will be able to:
 1. On the Basics tab of **New dedicated SQL pool** page, add the following details:
 
     - **Dedicated SQL pool name:** **sql dedicated pool (1)**
-
     - **Performance level:** Choose **DW100c (2)**
-
     - Click **Review + create (3)**
 
         ![](./media/image19.png)

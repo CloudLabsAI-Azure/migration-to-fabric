@@ -56,7 +56,6 @@ By the end of this lab, you will be able to:
 1. Verify that the following resources have deployed successfully:
 
     - Data Factory
-
     - Storage account
 
         ![](./media/image8.png)
