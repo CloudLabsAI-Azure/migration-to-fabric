@@ -77,26 +77,29 @@ By the end of this lab, you will be able to:
 
      ![](../Lab1/media/image15.png) 
 
-     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-     > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
-     > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+### Congratulations!
 
-     <validation step="c1d778f6-2e99-4a3c-b246-06537302d31c" />     
+You’ve completed the task. Now let’s validate it:
+
+- Hit the **Validate** button for the corresponding task.
+- If successful, proceed to the next task.
+- If not, retry using the lab guide.
+- Need help? cloudlabs-support@spektrasystems.com
+<validation step="c1d778f6-2e99-4a3c-b246-06537302d31c" />     
 
 ## Task 2: Create a dedicated SQL pool
 
 1. On the **fabric-synapse<inject key="DeploymentID" enableCopy="false"/>** workspace Overview page, click click **Open** in the **Open Synapse Studio** dialog to launch Azure Synapse Studio.
 
-     ![](../Lab1/media/image16.png)
+   ![](../Lab1/media/image16.png)
 
 1. In Synapse Studio, select **Manage** from the left navigation pane.
 
-     ![](../Lab1/media/image17.png)
+   ![](../Lab1/media/image17.png)
 
 1. Select **SQL pools (1)** under **Analytics pools** and then click on **+ New (2)** to create a new SQL pool.
 
-     ![](../Lab1/media/new0.png)
+   ![](../Lab1/media/new0.png)
 
 1. On the Basics tab of **New dedicated SQL pool** page, add the following details:
 
@@ -104,21 +107,21 @@ By the end of this lab, you will be able to:
     - **Performance level:** Choose **DW100c (2)**
     - Click **Review + create (3)**
 
-        ![](../Lab1/media/image19.png)
+      ![](../Lab1/media/image19.png)
 
 1. In the **Review + submit** tab, once the Validation is Passed, click on the **Create** button.
 
-     ![](../Lab1/media/image20.png)
+   ![](../Lab1/media/image20.png)
 
-     ![](../Lab1/media/image21.png)
+   ![](../Lab1/media/image21.png)
 
 1. Go to **Manage → SQL pools** and confirm the newly created Dedicated SQL Pool **sql dedicated pool** shows status as **Online**
 
-     ![](../Lab1/media/image22.png)
+   ![](../Lab1/media/image22.png)
 
 1. Return to the **Azure portal**. In the **Overview** section of the Synapse workspace, copy the **Dedicated SQL endpoint** and **Dedicated SQL pool** details, and save them in a Notepad for later use.
 
-     ![](../Lab1/media/image23.png)
+   ![](../Lab1/media/image23.png)
 
      > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
      > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
