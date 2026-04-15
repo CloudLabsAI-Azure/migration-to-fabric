@@ -46,7 +46,7 @@ In this task, you will create a new warehouse in Microsoft Fabric to store migra
     - If successful, proceed to the next task.
     - If not, retry using the lab guide.
     - Need help? cloudlabs-support@spektrasystems.com
-    <validation step="1ee57940-621b-4154-aeb5-75fd27b16bd0" />     
+    <validation step="1ee57940-621b-4154-aeb5-75fd27b16bd0" />
 
 ## Task 2: Create Linked Connection to Synapse SQL
 
@@ -54,7 +54,7 @@ In this task, you will create a new warehouse in Microsoft Fabric to store migra
 
 1. Select **Workspaces (1)** from the left navigation pane, and then choose **Fabric_Migration<inject key="DeploymentID" enableCopy="false"/> (2)** from the list.
 
-    ![](./media/new0.png)
+     ![](./media/new0.png)
 
 1. In the **Fabric_Migration<inject key="DeploymentID" enableCopy="false"/>** page, select **+ New item (1)**, then click **Pipeline (2)** to view the full list of available items under **Get data**.
 
