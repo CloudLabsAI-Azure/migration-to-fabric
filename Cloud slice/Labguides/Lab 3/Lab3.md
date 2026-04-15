@@ -85,6 +85,7 @@ You’ve completed the task. Now let’s validate it:
 - If successful, proceed to the next task.
 - If not, retry using the lab guide.
 - Need help? cloudlabs-support@spektrasystems.com
+
 <validation step="c1d778f6-2e99-4a3c-b246-06537302d31c" />     
 
 ## Task 2: Create a dedicated SQL pool
