@@ -27,17 +27,17 @@ By the end of this lab, you will be able to:
    https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.datafactory%2Fdata-factory-get-started%2Fazuredeploy.json
    ```
     
-1. Select the your **fabric-rg (1)** as resource group, and then click **Review + create (2)** to proceed.
+2. Select the your **fabric-rg (1)** as resource group, and then click **Review + create (2)** to proceed.
 
    ![](./media/image3.png)
 
-1. In the **Review + submit** tab, once validation passes, click **Create**.
+3. In the **Review + submit** tab, once validation passes, click **Create**.
 
    ![](./media/image4.png)
 
    ![](./media/image5.png)
 
-1. After deployment completes, click **Go to resource group**.
+4. After deployment completes, click **Go to resource group**.
 
    ![](./media/image6.png)
 
@@ -59,44 +59,44 @@ By the end of this lab, you will be able to:
 
      ![](./media/image8.png)
 
-1. Select **Azure Data Factory (V2)**.
+2. Select **Azure Data Factory (V2)**.
 
    ![](./media/image9.png)
 
-1. Click **Launch studio** to open Azure Data Factory Studio.
+3. Click **Launch studio** to open Azure Data Factory Studio.
 
    ![](./media/image10.png)
 
    ![](./media/image11.png)
 
-1. In Azure Data Factory Studio, select the **Author** from the left navigation pane.
+4. In Azure Data Factory Studio, select the **Author** from the left navigation pane.
 
    ![](./media/image13.png)
 
-1. Select the pipeline that the template created.
+5. Select the pipeline that the template created.
 
    ![](./media/image14.png)
 
-1. Click on **Copy data** activity.
+6. Click on **Copy data** activity.
 
    ![](./media/image15.png)
 
-1. In the **Source** tab, review the **Source dataset**.
+7. In the **Source** tab, review the **Source dataset**.
 
    ![](./media/image16.png)
 
-1. In the source dataset, select **Open** to view the input file
+8. In the source dataset, select **Open** to view the input file
 created for the demo.
 
    ![](./media/image17.png)
 
-1. In the source dataset, click **Browse** to view the input folder.
+9. In the source dataset, click **Browse** to view the input folder.
 
    ![](./media/image18.png)
 
-1. Locate the **moviesDB2.csv** file that was preloaded in the input folder.
+10. Locate the **moviesDB2.csv** file that was preloaded in the input folder.
 
-   ![](./media/image19.png)
+    ![](./media/image19.png)
 
 ## Task 3: Trigger the demo pipeline to run
 
@@ -104,15 +104,15 @@ created for the demo.
 
    ![](./media/image20.png)
 
-1. Select **Trigger now.**
+2. Select **Trigger now.**
 
    ![](./media/image21.png)
 
-1. Click **OK** and verify the pipline run successfully.
+3. Click **OK** and verify the pipline run successfully.
 
    ![](./media/image22.png)    
 
-1. After the pipeline completes successfully, click **View pipeline run** in the notification panel to review the execution details.
+4. After the pipeline completes successfully, click **View pipeline run** in the notification panel to review the execution details.
 
    ![](./media/image24.png)
 
@@ -132,17 +132,17 @@ created for the demo.
    https://app.fabric.microsoft.com/
    ```
 
-1. Enter the following credentials to login to the Fabric portal:  
+2. Enter the following credentials to login to the Fabric portal:  
 
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
    - **Password:** <inject key="AzureAdUserPassword"></inject>    
 
-1. On the **Fabric Home** page click on **+ New Workspaces** as shown in the image below.
+3. On the **Fabric Home** page click on **+ New Workspaces** as shown in the image below.
 
    ![](../Lab1/media/image76.png)
 
-1. On the **Create a workspace** pane that appears to the right, enter the following details, and then click **Apply (4)**.
+4. On the **Create a workspace** pane that appears to the right, enter the following details, and then click **Apply (4)**.
 
    | Field                   | Value                                                                 |
    |------------------------|-----------------------------------------------------------------------|
@@ -154,17 +154,17 @@ created for the demo.
 
    ![](../Lab%203/media/new4.png)
 
-1. The Workspace is now created.   
+5. The Workspace is now created.   
 
-1. Select **Manage access** from the workspace menu.
+6. Select **Manage access** from the workspace menu.
 
    ![](../Lab%203/media/new18.png)
 
-1. In the Manage access pane, select **+ Add people or groups**.
+7. In the Manage access pane, select **+ Add people or groups**.
 
    ![](../Lab%203/media/new19.png)
 
-1. In the Add people pane, enter below **URL (1)** in the search box, then select the **Admin (3)** role from the dropdown next to **Viewer (2)** role, and click **Add (4)** to assign permissions.
+8. In the Add people pane, enter below **URL (1)** in the search box, then select the **Admin (3)** role from the dropdown next to **Viewer (2)** role, and click **Add (4)** to assign permissions.
 
    ```
    https://sandboxailabs1012.onmicrosoft.com/cloudlabs.ai
@@ -191,11 +191,11 @@ created for the demo.
 
    ![](./media/image38.png)
 
-1. Click the **Lakehouse** tile.
+2. Click the **Lakehouse** tile.
 
    ![](./media/image39.png)
 
-1. Enter **DataFactory_MigrationLakehouse (1)** in the **Name** field, uncheck the **Lakehouse schemas (2)** option, click **Create (3)**, and then open the newly created lakehouse.
+3. Enter **DataFactory_MigrationLakehouse (1)** in the **Name** field, uncheck the **Lakehouse schemas (2)** option, click **Create (3)**, and then open the newly created lakehouse.
 
    ![](./media/image40.png)
 
@@ -214,107 +214,107 @@ created for the demo.
 
    ![](./media/image42.png)
 
-1. From the **Manage** section, navigate to **Linked services** and click **Migrate to Fabric (Preview)** from the top- right corner to start the migration process.
+2. From the **Manage** section, navigate to **Linked services** and click **Migrate to Fabric (Preview)** from the top- right corner to start the migration process.
 
    ![](./media/image43.png)
 
-1. On the Plan ahead with Fabric screen, click **Get started** to begin the migration workflow.
+3. On the Plan ahead with Fabric screen, click **Get started** to begin the migration workflow.
 
    ![](./media/image44.png)
 
-1. Review the migration assessment summary. Once the pipeline appears with a Ready status, click **Next** to continue.
+4. Review the migration assessment summary. Once the pipeline appears with a Ready status, click **Next** to continue.
 
    ![](./media/image45.png)
 
-1. Select the **Azure Data Factory-Fabric<inject key="DeploymentID" enableCopy="false"/> (1)** workspace from the dropdown and click **Mount (2)** to link Azure Data Factory to the Fabric workspace.
+5. Select the **Azure Data Factory-Fabric<inject key="DeploymentID" enableCopy="false"/> (1)** workspace from the dropdown and click **Mount (2)** to link Azure Data Factory to the Fabric workspace.
 
    ![](./media/image46.png)
 
-1. Once mounting completes, click **Continue in Fabric** to proceed with the migration steps.
+6. Once mounting completes, click **Continue in Fabric** to proceed with the migration steps.
 
    ![](./media/image47.png)
 
    ![](./media/image48.png)
 
-1. Click **Migrate to Fabric (Preview)**.
+7. Click **Migrate to Fabric (Preview)**.
 
    ![](./media/image49.png)
 
-1. Verify the pipeline shows as Ready in the migration summary, then click **Review connections** to continue.
+8. Verify the pipeline shows as Ready in the migration summary, then click **Review connections** to continue.
 
    ![](./media/image50.png)
 
-1. Click **Confirm**
+9. Click **Confirm**
 
    ![](./media/image51.png)
 
-1. Select the folder for the migrated items and click **Confirm**.
+10. Select the folder for the migrated items and click **Confirm**.
 
-   ![](./media/image52.png)
+    ![](./media/image52.png)
 
-1. Once the migration completes and the status shows *Success*, click **Close** to exit the migration results window, then navigate to the Fabric workspace to locate the migrated data factory.
+11. Once the migration completes and the status shows *Success*, click **Close** to exit the migration results window, then navigate to the Fabric workspace to locate the migrated data factory.
 
-   ![](../Lab%203/media/new22.png)
+    ![](../Lab%203/media/new22.png)
 
-1. Go to **Workspaces (1)** from the left navigation and select the **Azure Data Factory-Fabric<inject key="DeploymentID" enableCopy="false"/> (2)** workspace to open and access its resources.
+12. Go to **Workspaces (1)** from the left navigation and select the **Azure Data Factory-Fabric<inject key="DeploymentID" enableCopy="false"/> (2)** workspace to open and access its resources.
 
-   ![](../Lab%203/media/new23.png)
+    ![](../Lab%203/media/new23.png)
 
-1. Open the available **Folder** to view and manage the migration-related resources.
+13. Open the available **Folder** to view and manage the migration-related resources.
 
-   ![](../Lab%203/media/new24.png)
+    ![](../Lab%203/media/new24.png)
 
-1. Open the **Pipeline** to view and manage the data copy workflow.
+14. Open the **Pipeline** to view and manage the data copy workflow.
 
-   ![](../Lab%203/media/new25.png)
+    ![](../Lab%203/media/new25.png)
 
-   ![](./media/image56.png)
+    ![](./media/image56.png)
 
-1. Go to the **Source (1)** tab and click **Browse (2)** to select the file or folder path for the source data.
+15. Go to the **Source (1)** tab and click **Browse (2)** to select the file or folder path for the source data.
 
-   ![](../Lab%203/media/new27.png)
+    ![](../Lab%203/media/new27.png)
 
-1. Navigate to the **Root folder > datafactory > input (1)** folder, select the **moviesDB2.csv (2)** file, and click **OK (3)** to confirm the source file selection.
+16. Navigate to the **Root folder > datafactory > input (1)** folder, select the **moviesDB2.csv (2)** file, and click **OK (3)** to confirm the source file selection.
 
-   ![](../Lab%203/media/new26.png)
+    ![](../Lab%203/media/new26.png)
 
-   ![](./media/image57.png)
+    ![](./media/image57.png)
 
-1. Navigate to the **Destination** tab. Open the **Connection** dropdown and select the **Browse all** option.
+17. Navigate to the **Destination** tab. Open the **Connection** dropdown and select the **Browse all** option.
 
-   ![](./media/image58.png)
+    ![](./media/image58.png)
 
-1. In the destination selection window, choose **OneLake catalog** from the left pane, then select **DataFactory_MigrationLakehouse**.
+18. In the destination selection window, choose **OneLake catalog** from the left pane, then select **DataFactory_MigrationLakehouse**.
 
-   ![](./media/image59.png)
+    ![](./media/image59.png)
 
-1. In the **Destination** settings, select the **Files** option, set the file format to **Binary**, and then configure the remaining parameters.
+19. In the **Destination** settings, select the **Files** option, set the file format to **Binary**, and then configure the remaining parameters.
 
-   ![](./media/image60.png)
+    ![](./media/image60.png)
 
-1. Click **Run** to execute the copy activity.
+20. Click **Run** to execute the copy activity.
 
-   ![](./media/image61.png)
+    ![](./media/image61.png)
 
-1. Click **Save and run** to save and execute the pipeline.
+21. Click **Save and run** to save and execute the pipeline.
 
-   ![](./media/image62.png)
+    ![](./media/image62.png)
 
-   ![](./media/image63.png)
+    ![](./media/image63.png)
 
-1. Go to **Workspaces (1)** from the left navigation and select the **Azure Data Factory-Fabric<inject key="DeploymentID" enableCopy="false"/> (2)** workspace to open and access its resources.
+22. Go to **Workspaces (1)** from the left navigation and select the **Azure Data Factory-Fabric<inject key="DeploymentID" enableCopy="false"/> (2)** workspace to open and access its resources.
 
-   ![](../Lab%203/media/new23.png)
+    ![](../Lab%203/media/new23.png)
 
-1. Navigate to your **DataFactory_MigrationLakehouse**.
+23. Navigate to your **DataFactory_MigrationLakehouse**.
 
-   ![](../Lab%203/media/new28.png)
+    ![](../Lab%203/media/new28.png)
 
-1. Click on the **ellipsis (...)** next to **Files** folder, then select **Refresh** from the the list and verify if the **moviesDB2.csv** is loaded.
+24. Click on the **ellipsis (...)** next to **Files** folder, then select **Refresh** from the the list and verify if the **moviesDB2.csv** is loaded.
 
-   ![](./media/image65.png)
+    ![](./media/image65.png)
 
-   ![](./media/image66.png)
+    ![](./media/image66.png)
 
 ## Task 8: Schedule the Pipeline
 
@@ -322,19 +322,19 @@ created for the demo.
 
    ![](../Lab%203/media/new23.png)
 
-1. Open the available **Folder** to view and manage the migration-related resources.
+2. Open the available **Folder** to view and manage the migration-related resources.
 
    ![](../Lab%203/media/new24.png)
 
-1. Open the **Pipeline** to view and manage the data copy workflow.
+3. Open the **Pipeline** to view and manage the data copy workflow.
 
    ![](../Lab%203/media/new25.png)
 
-1. Click **Schedule**
+4. Click **Schedule**
 
    ![](./media/image68.png)
 
-1. Select **+ Add schedule**, configure the schedule as needed, then click **Save** and close the panel.
+5. Select **+ Add schedule**, configure the schedule as needed, then click **Save** and close the panel.
 
    ![](./media/image69.png)
 
@@ -342,7 +342,7 @@ created for the demo.
 
    > **Note**: The example here schedules the pipeline to execute daily at 8:00 PM until the end of the year.
 
-1. From the workspace view, select the migrated Azure Data Factory resource to continue configuring and validating the pipeline
+6. From the workspace view, select the migrated Azure Data Factory resource to continue configuring and validating the pipeline
 
    ![](./media/image71.png)
 
