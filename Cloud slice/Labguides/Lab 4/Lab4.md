@@ -23,9 +23,9 @@ By the end of this lab, you will be able to:
 
 1. Navigate to the Azure deployment template: 
 
-    ```
-    https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.datafactory%2Fdata-factory-get-started%2Fazuredeploy.json
-    ```
+     ```
+     https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.datafactory%2Fdata-factory-get-started%2Fazuredeploy.json
+     ```
     
 1. Select the your **fabric-rg (1)** as resource group, and then click **Review + create (2)** to proceed.
 
@@ -49,17 +49,14 @@ By the end of this lab, you will be able to:
      > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
      > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="6e598d89-7be7-411f-9e69-30abaeed7a95" />      
+     <validation step="6e598d89-7be7-411f-9e69-30abaeed7a95" />      
 
 ## Task 2: Review deployed resources
 
 1. Verify that the following resources have deployed successfully:
-
     - Data Factory
-
     - Storage account
-
-        ![](./media/image8.png)
+          ![](./media/image8.png)
 
 1. Select **Azure Data Factory (V2)**.
 
@@ -168,15 +165,15 @@ created for the demo.
 
 1. In the Add people pane, enter below **URL (1)** in the search box, then select the **Admin (3)** role from the dropdown next to **Viewer (2)** role, and click **Add (4)** to assign permissions.
 
-    ```
-    https://sandboxailabs1012.onmicrosoft.com/cloudlabs.ai
-    ```
+     ```
+     https://sandboxailabs1012.onmicrosoft.com/cloudlabs.ai
+     ```
 
-    OR
+     OR
 
-    ```
-    https://sandboxailabs1013.onmicrosoft.com/cloudlabs.ai
-    ```
+     ```
+     https://sandboxailabs1013.onmicrosoft.com/cloudlabs.ai
+     ```
 
     ![](../Lab%203/media/new18.png)  
 
@@ -186,7 +183,7 @@ created for the demo.
      > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
      > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="77fc3e92-9686-47d7-8695-b22121cc1bb7" />      
+     <validation step="77fc3e92-9686-47d7-8695-b22121cc1bb7" />      
 
 ## Task 6: Create a lakehouse and ingest sample data
 
@@ -210,7 +207,7 @@ created for the demo.
      > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
      > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="460a5b9a-aa50-41e6-a066-823156ca38bd" />      
+     <validation step="460a5b9a-aa50-41e6-a066-823156ca38bd" />      
 
 ## Task 7: Bring your Azure Data Factory to Fabric
 
